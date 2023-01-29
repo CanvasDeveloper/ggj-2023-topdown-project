@@ -5,32 +5,21 @@ using NaughtyAttributes;
 
 public class SSIntegrationHealthSystem : MonoBehaviour
 {
-    //Statics
-    private static string HIT_EFFECT = "HITEFFECT_ON";
+    private readonly int HitParam = Animator.StringToHash("Hit");
 
     private Material material;
 
+    private Animator shaderEffectsAnimator;
+
     private void Awake()
     {
+        shaderEffectsAnimator = GetComponent<Animator>();
         material = GetComponent<Renderer>().material;
     }
 
-    private void Update()
-    {
-        
-    }
-
+    [ContextMenu("HIT EFFECT")] //usa isso nos 3 pontinhos do inspector
     public void HitEffect()
     {
-        StartCoroutine(HitEffectRoutine());
-    }
-
-    private IEnumerator HitEffectRoutine()
-    {
-        material.EnableKeyword(HIT_EFFECT);
-
-        yield return 0.2f;
-
-        material.DisableKeyword(HIT_EFFECT);
+        shaderEffectsAnimator.SetTrigger(HitParam);
     }
 }
