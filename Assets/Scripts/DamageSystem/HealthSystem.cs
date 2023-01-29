@@ -12,6 +12,12 @@ public class HealthSystem : MonoBehaviour, IDamageable
     //avisa que o gameObject foi morto
     public event Action OnDie;
 
+    private void Start()
+    {
+        CurrentHealth = MaxHealth;
+        OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
+    }
+
     /// <summary>
     /// Tomar dano
     /// </summary>
