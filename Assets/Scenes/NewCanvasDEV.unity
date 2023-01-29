@@ -511,8 +511,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: AllIn1SpriteShader/AllIn1SpriteShader
   m_Shader: {fileID: 4800000, guid: 79ee6cefbc672a44e97359d4d14ea301, type: 3}
-  m_ValidKeywords:
-  - GHOST_ON
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - _GLOWAFFECTLIGHT_ON
   m_LightmapFlags: 4
@@ -624,7 +623,7 @@ Material:
     - _FlickerAlpha: 0
     - _FlickerFreq: 0.2
     - _FlickerPercent: 0.05
-    - _GhostBlend: 1
+    - _GhostBlend: 0
     - _GhostColorBoost: 2
     - _GhostTransparency: 0.7
     - _GlitchAmount: 3
