@@ -10,7 +10,8 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
         {
             string typename = typeof(T).Name;
             Debug.LogWarning($"More that one instance of {typename} found.");
-            Destroy(this);
+            Debug.LogError("Clean your scene!");
+            Destroy(gameObject);
         }
 
         Instance = this as T;
