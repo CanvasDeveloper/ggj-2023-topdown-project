@@ -7,6 +7,7 @@ public interface IDamageable
 {
     public float CurrentHealth { get; set; }
     public float MaxHealth { get; set; }
+    public bool IsDie { get; set; }
 
     public event Action<float, float> OnChangeHealth; //current / max usado somente para UI
     public event Action OnTakeDamage; //usado para parar o player e VFX

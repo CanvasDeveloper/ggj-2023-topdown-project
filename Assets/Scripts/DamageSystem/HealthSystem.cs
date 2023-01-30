@@ -6,6 +6,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     //[field:] serve pra deixar variaveis que tem esse { get; set; } no final, visiveis no editor;
     [field:SerializeField] public float CurrentHealth { get; set; }
     [field: SerializeField] public float MaxHealth { get; set; }
+    public bool IsDie { get ; set ; }
 
     //diz que esse carinha alterou a vida (dano ou cura), e passa a vida atual
     public event Action<float, float> OnChangeHealth;
@@ -44,6 +45,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public void Die()
     {
         OnDie?.Invoke();
+        IsDie = true;
     }
 
     /// <summary>
