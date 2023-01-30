@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour, IDamageable
 {
-    //[field:] serve pra deixar variáveis que tem esse { get; set; } no final, visíveies no editor;
+    //[field:] serve pra deixar variaveis que tem esse { get; set; } no final, visiveis no editor;
     [field:SerializeField] public float CurrentHealth { get; set; }
     [field: SerializeField] public float MaxHealth { get; set; }
 
@@ -43,7 +43,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     /// <summary>
     /// Para curar
     /// </summary>
-    /// <param name="amount"></param>
+    /// <param name="amount">quantidade</param>
     public void Heal(float amount)
     {
         CurrentHealth += amount;
