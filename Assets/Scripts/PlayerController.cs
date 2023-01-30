@@ -2,6 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
+
+[Serializable]
+public class SpriteRotationHandler
+{
+    public GameObject sprite;
+    public Vector3 startRotation;
+    public Vector3 targetRotation;
+}
 
 [RequireComponent(typeof(InputReference))]
 public class PlayerController : MonoBehaviour
@@ -10,11 +19,20 @@ public class PlayerController : MonoBehaviour
     [Header("Player Status")]
     [SerializeField] private float moveSpeed = 5f;
 
+    [HorizontalLine(1, EColor.Green)]
+
+    [Header("Rotate Sprites")]
+    [SerializeField] private SpriteRotationHandler playerSpriteRotation;
+    [SerializeField] private SpriteRotationHandler gunSpriteRotation;
+
+    [HorizontalLine(1, EColor.Green)]
 
     [Header("Bullets")]
     //Para fins de teste
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform bulletPoisiton;
+    [SerializeField] private Transform gunPivot;
+
     //Ambos ainda colocados aqui para registro de variaveis
     [SerializeField] private float bulletSpeed = 5f;
     [SerializeField] private float BulletDamage = 5f;
@@ -23,6 +41,9 @@ public class PlayerController : MonoBehaviour
 
     private bool isCanShoot = true;
     private Camera main;
+
+    private Vector3 mouseWorldPosition;
+    private bool isLookingLeft;
 
     private InputReference _inputReference;
     private Rigidbody2D _rigidbody2D;
@@ -47,9 +68,12 @@ public class PlayerController : MonoBehaviour
         if (health.IsDie)
             return;
 
-        UpdatePlayerRotation();
+        mouseWorldPosition = main.ScreenToWorldPoint(_inputReference.MousePosition);
 
-        if(_inputReference.PauseButton.IsPressed)
+        UpdatePlayerRotation();
+        UpdateSpriteSide();
+
+        if (_inputReference.PauseButton.IsPressed)
         {
             //Preguica :)
             GameManager.Instance.PauseResume();
@@ -76,10 +100,30 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void UpdatePlayerRotation()
     {
-        Vector3 mouseWorldPosition = main.ScreenToWorldPoint(_inputReference.MousePosition);
         Vector3 targetDirection = mouseWorldPosition - transform.position;
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        gunPivot.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+    }
+
+    /// <summary>
+    /// Flipa a arma e o player
+    /// </summary>
+    private void UpdateSpriteSide()
+    {
+        //olhando para esquerda, mouse na direita
+        if (isLookingLeft && mouseWorldPosition.x > transform.position.x)
+        {
+            isLookingLeft = false;
+            playerSpriteRotation.sprite.transform.localRotation = Quaternion.Euler(playerSpriteRotation.startRotation);
+            gunSpriteRotation.sprite.transform.localRotation = Quaternion.Euler(gunSpriteRotation.startRotation);
+        }
+
+        if(!isLookingLeft && mouseWorldPosition.x < transform.position.x)
+        {
+            isLookingLeft = true;
+            playerSpriteRotation.sprite.transform.localRotation = Quaternion.Euler(playerSpriteRotation.targetRotation);
+            gunSpriteRotation.sprite.transform.localRotation = Quaternion.Euler(gunSpriteRotation.targetRotation);
+        }
     }
 
     private IEnumerator IE_CanShoot()
