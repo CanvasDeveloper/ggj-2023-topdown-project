@@ -6,6 +6,12 @@ public class GameManager : Singleton<GameManager>
     public event Action<bool> OnPauseStatusChange;
     public bool Paused { get; private set; }
 
+    private void Start()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+    }
+
     /// <summary>
     /// Use pra evitar que o player pause em horas que nao deve.
     /// </summary>
