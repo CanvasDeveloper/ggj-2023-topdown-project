@@ -11,6 +11,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public event Action<float, float> OnChangeHealth;
     //avisa que o gameObject foi morto
     public event Action OnDie;
+    public event Action OnTakeDamage;
+    public event Action OnHeal;
 
     private void Start()
     {
@@ -24,6 +26,9 @@ public class HealthSystem : MonoBehaviour, IDamageable
     /// <param name="damage">dano</param>
     public void TakeDamage(float damage)
     {
+        if (damage <= 0)
+            return;
+
         CurrentHealth -= damage;
 
         if (CurrentHealth < 0)
@@ -33,6 +38,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         }
 
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
+        OnTakeDamage?.Invoke();
     }
 
     public void Die()
@@ -46,11 +52,15 @@ public class HealthSystem : MonoBehaviour, IDamageable
     /// <param name="amount">quantidade</param>
     public void Heal(float amount)
     {
+        if (amount <= 0)
+            return;
+
         CurrentHealth += amount;
 
         if (CurrentHealth > MaxHealth)
             CurrentHealth = MaxHealth;
 
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
+        OnHeal?.Invoke();
     }
 }
