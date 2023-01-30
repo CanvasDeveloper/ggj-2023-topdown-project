@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class InputButton
@@ -6,18 +7,30 @@ public class InputButton
     public bool IsPressed;
 }
 
-public class InputReference : MonoBehaviour
+public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
 {
     //quero pegar o valor, mas nao deixo ninguem de fora atualizar
     public Vector2 Movement { get; private set; } = Vector2.zero;
     public InputButton PauseButton { get; private set; } = new InputButton();
 
-    private void Update()
+    private PlayerInputMap playerInputs;
+
+    private void Start()
     {
-        UpdateMovementValue();
-        UpdatePauseValue();
+        playerInputs = new PlayerInputMap();
+
+        playerInputs.Gameplay.SetCallbacks(this);
+        playerInputs.Enable();
     }
 
+    private void Update()
+    {
+        //Old input
+        //UpdateMovementValue();
+        //UpdatePauseValue();
+    }
+
+    #region OLD INPUT
     private void UpdateMovementValue()
     {
         var inputX = Input.GetAxisRaw("Horizontal");
@@ -37,12 +50,26 @@ public class InputReference : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.P))
             PauseButton.IsPressed = false;
     }
+    #endregion
+
+    public void OnMovement(InputAction.CallbackContext context)
+    {
+        var input = context.ReadValue<Vector2>();
+
+        Movement = new Vector2(input.x, input.y).normalized;
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        PauseButton.IsPressed = context.ReadValueAsButton();
+        StartCoroutine(ResetButton(PauseButton));
+    }
 
     private IEnumerator ResetButton(InputButton button)
     {
         yield return new WaitForEndOfFrame();
-        
-        if(button.IsPressed)
+
+        if (button.IsPressed)
             button.IsPressed = false;
     }
 }
