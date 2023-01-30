@@ -41,6 +41,8 @@ public class InputReference : MonoBehaviour
     private IEnumerator ResetButton(InputButton button)
     {
         yield return new WaitForEndOfFrame();
-        button.IsPressed = false;
+        
+        if(button.IsPressed)
+            button.IsPressed = false;
     }
 }
