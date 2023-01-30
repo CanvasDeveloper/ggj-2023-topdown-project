@@ -21,10 +21,7 @@ public class PlayerController : MonoBehaviour
         if(_inputReference.PauseButton.IsPressed)
         {
             //Preguica :)
-            if (GameManager.Instance.Paused)
-                GameManager.Instance.PauseGame();
-            else
-                GameManager.Instance.ResumeGame();
+            GameManager.Instance.PauseResume();
         }
     }
 
