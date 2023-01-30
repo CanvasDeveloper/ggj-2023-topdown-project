@@ -1,16 +1,25 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class SceneLoader : Singleton<SceneLoader>
 {
+    public event Action OnSceneStartLoading;
+
     private readonly int FadeInParam = Animator.StringToHash("FadeIn");
     private readonly int FadeOutParam = Animator.StringToHash("FadeOut");
 
+    [SerializeField] private GameObject fadeCanvas;
     [SerializeField] private Animator animator;
     [SerializeField] private float animationFadeTime = 0.3f;
 
     private bool isLoadingScene;
+
+    private void Start()
+    {
+        fadeCanvas.SetActive(true);
+    }
 
     public void ReloadScene()
     {
@@ -33,6 +42,8 @@ public class SceneLoader : Singleton<SceneLoader>
     private IEnumerator LoadSceneRoutine(int sceneIndex)
     {
         isLoadingScene = true;
+
+        OnSceneStartLoading?.Invoke();
 
         animator.SetTrigger(FadeInParam);
 
