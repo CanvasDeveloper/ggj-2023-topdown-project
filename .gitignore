@@ -58,3 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+UserSettings/EditorUserSettings.asset
+UserSettings/Layouts/default-2021.dwlt
+ProjectSettings/ShaderGraphSettings.asset
+UserSettings/EditorUserSettings.asset
