@@ -18,12 +18,12 @@ public class GameplayCanvas : MonoBehaviour
 
         if(backgroundButton)
             backgroundButton.onClick.AddListener(HandlePauseUIButton);
+
+        GameManager.Instance.OnPauseStatusChange += HandlePauseUI;
     }
 
     private void OnEnable()
     {
-        GameManager.Instance.OnPauseStatusChange += HandlePauseUI;
-
         //TODO: Aqui estah soh por teste como "PlayerController", precisamos da arvore pro player receber dano
         playerHealthSystem = FindObjectOfType<PlayerController>().gameObject.GetComponent<IDamageable>();
 
@@ -34,11 +34,14 @@ public class GameplayCanvas : MonoBehaviour
 
     private void OnDisable()
     {
-        GameManager.Instance.OnPauseStatusChange -= HandlePauseUI;
-
         //removendo os eventos
         playerHealthSystem.OnChangeHealth -= UpdateHealthBar;
         playerHealthSystem.OnDie -= OpenDeathScreen;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnPauseStatusChange -= HandlePauseUI;
     }
 
     private void HandlePauseUIButton()
