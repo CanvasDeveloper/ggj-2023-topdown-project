@@ -16,6 +16,18 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if(_inputReference.PauseButton.IsPressed)
+        {
+            //Preguica :)
+            if (GameManager.Instance.Paused)
+                GameManager.Instance.PauseGame();
+            else
+                GameManager.Instance.ResumeGame();
+        }
+    }
+
     private void FixedUpdate()
     {
         _rigidbody2D.velocity = _inputReference.Movement * moveSpeed;
