@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InputButton
@@ -9,7 +8,7 @@ public class InputButton
 
 public class InputReference : MonoBehaviour
 {
-    //quero pegar o valor, mas não deixo ninguém de fora atualizar
+    //quero pegar o valor, mas nao deixo ninguem de fora atualizar
     public Vector2 Movement { get; private set; } = Vector2.zero;
     public InputButton PauseButton { get; private set; } = new InputButton();
 
