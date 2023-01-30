@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 528942230612266195}
+  deathPanel: {fileID: 3826932599513170892}
   backgroundButton: {fileID: 528942231063297981}
 --- !u!1 &3676237085136938711
 GameObject:
@@ -589,7 +590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5299003645202563377
 RectTransform:
   m_ObjectHideFlags: 0
