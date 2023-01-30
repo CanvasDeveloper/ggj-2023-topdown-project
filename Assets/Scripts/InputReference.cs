@@ -27,7 +27,8 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
     //Para fins de teste
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform bulletPoisiton;
-
+    private bool isCanShoot = true;
+    private Camera main;
 
     private void Start()
     {
@@ -35,10 +36,20 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
 
         playerInputs.Gameplay.SetCallbacks(this);
         playerInputs.Enable();
+        main = Camera.main;
     }
 
     private void Update()
     {
+        //Rotaciona o player
+        Vector2 mouseScreenPosition = playerInputs.Gameplay.MousePosition.ReadValue<Vector2>();
+        Vector3  mouseWorldPosition = main.ScreenToWorldPoint(mouseScreenPosition);
+        Vector3 targetDirection = mouseWorldPosition - transform.position;
+        float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+
+    
+
         //Old input
         //UpdateMovementValue();
         //UpdatePauseValue();
@@ -67,6 +78,13 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
     #endregion
 
 
+    private IEnumerator IE_CanShoot()
+    {
+        isCanShoot = false;
+        yield return new WaitForSeconds(0.5f);
+        isCanShoot = true;
+    }
+
     public void OnMousePosition(InputAction.CallbackContext context)
     {
         Vector2 mousePoision = context.ReadValue<Vector2>();
@@ -76,8 +94,12 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
     {
         if (context.started)
         {
+            if (!isCanShoot)
+                return;
+
             GameObject temp = Instantiate(bulletPrefab, bulletPoisiton.position, bulletPoisiton.rotation);
             Debug.Log("apertou mouse");
+            StartCoroutine(IE_CanShoot());
         }       
             
         

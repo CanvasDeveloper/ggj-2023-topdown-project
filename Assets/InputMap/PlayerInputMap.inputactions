@@ -214,7 +214,7 @@
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "keyboard + mouse",
                     "action": "MousePosition",
                     "isComposite": false,
                     "isPartOfComposite": false
