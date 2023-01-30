@@ -2,18 +2,18 @@ using UnityEngine;
 
 public abstract class Singleton<T> : MonoBehaviour where T : Component
 {
-    public static T instance;
+    public static T Instance;
 
     protected virtual void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             string typename = typeof(T).Name;
             Debug.LogWarning($"More that one instance of {typename} found.");
             Destroy(this);
         }
 
-        instance = this as T;
+        Instance = this as T;
 
         DontDestroyOnLoad(gameObject);
     }
