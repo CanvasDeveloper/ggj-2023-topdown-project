@@ -24,6 +24,7 @@ public class GameplayCanvas : MonoBehaviour
     {
         GameManager.Instance.OnPauseStatusChange += HandlePauseUI;
 
+        //TODO: Aqui estah soh por teste como "PlayerController", precisamos da arvore pro player receber dano
         playerHealthSystem = FindObjectOfType<PlayerController>().gameObject.GetComponent<IDamageable>();
 
         //Registrando os eventos
