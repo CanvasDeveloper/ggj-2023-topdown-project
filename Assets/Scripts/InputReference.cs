@@ -2,11 +2,17 @@ using System.Collections;
 using UnityEngine.InputSystem;
 using UnityEngine;
 
+/// <summary>
+/// Simula um botao, para evitar que seja trigado mais de uma vez no update
+/// </summary>
 public class InputButton
 {
     public bool IsPressed;
 }
 
+/// <summary>
+/// Usado pelo player
+/// </summary>
 public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
 {
     //quero pegar o valor, mas nao deixo ninguem de fora atualizar
