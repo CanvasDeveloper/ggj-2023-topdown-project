@@ -68,6 +68,9 @@ public class PlayerController : MonoBehaviour
         if (health.IsDie)
             return;
 
+        if (GameManager.Instance && GameManager.Instance.Paused)
+            return;
+
         mouseWorldPosition = main.ScreenToWorldPoint(_inputReference.MousePosition);
 
         UpdatePlayerRotation();
