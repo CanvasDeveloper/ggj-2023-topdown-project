@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     private Camera main;
 
     private Vector3 mouseWorldPosition;
-    private bool isLookingLeft;
+    [SerializeField] private bool isLookingLeft;
 
     private InputReference _inputReference;
     private Rigidbody2D _rigidbody2D;
