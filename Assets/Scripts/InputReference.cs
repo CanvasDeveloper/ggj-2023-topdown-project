@@ -8,6 +8,9 @@ using UnityEngine;
 public class InputButton
 {
     public bool IsPressed;
+
+ 
+
 }
 
 /// <summary>
@@ -20,6 +23,11 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
     public InputButton PauseButton { get; private set; } = new InputButton();
 
     private PlayerInputMap playerInputs;
+
+    //Para fins de teste
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform bulletPoisiton;
+
 
     private void Start()
     {
@@ -57,6 +65,24 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
             PauseButton.IsPressed = false;
     }
     #endregion
+
+
+    public void OnMousePosition(InputAction.CallbackContext context)
+    {
+        Vector2 mousePoision = context.ReadValue<Vector2>();
+        mousePoision = Camera.main.ScreenToWorldPoint(mousePoision);
+    }
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            GameObject temp = Instantiate(bulletPrefab, bulletPoisiton.position, bulletPoisiton.rotation);
+            Debug.Log("apertou mouse");
+        }       
+            
+        
+       
+    }
 
     public void OnMovement(InputAction.CallbackContext context)
     {
