@@ -20,15 +20,11 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
 {
     //quero pegar o valor, mas nao deixo ninguem de fora atualizar
     public Vector2 Movement { get; private set; } = Vector2.zero;
+    public Vector2 MousePosition { get; private set; } = Vector2.zero;
     public InputButton PauseButton { get; private set; } = new InputButton();
+    public InputButton ShootButton { get; private set; } = new InputButton();
 
     private PlayerInputMap playerInputs;
-
-    //Para fins de teste
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform bulletPoisiton;
-    private bool isCanShoot = true;
-    private Camera main;
 
     private void Start()
     {
@@ -36,20 +32,10 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
 
         playerInputs.Gameplay.SetCallbacks(this);
         playerInputs.Enable();
-        main = Camera.main;
     }
 
     private void Update()
     {
-        //Rotaciona o player
-        Vector2 mouseScreenPosition = playerInputs.Gameplay.MousePosition.ReadValue<Vector2>();
-        Vector3  mouseWorldPosition = main.ScreenToWorldPoint(mouseScreenPosition);
-        Vector3 targetDirection = mouseWorldPosition - transform.position;
-        float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-
-    
-
         //Old input
         //UpdateMovementValue();
         //UpdatePauseValue();
@@ -76,34 +62,12 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
             PauseButton.IsPressed = false;
     }
     #endregion
-
-
-    private IEnumerator IE_CanShoot()
-    {
-        isCanShoot = false;
-        yield return new WaitForSeconds(0.5f);
-        isCanShoot = true;
-    }
+   
 
     public void OnMousePosition(InputAction.CallbackContext context)
     {
-        Vector2 mousePoision = context.ReadValue<Vector2>();
-        mousePoision = Camera.main.ScreenToWorldPoint(mousePoision);
-    }
-    public void OnShoot(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            if (!isCanShoot)
-                return;
-
-            GameObject temp = Instantiate(bulletPrefab, bulletPoisiton.position, bulletPoisiton.rotation);
-            Debug.Log("apertou mouse");
-            StartCoroutine(IE_CanShoot());
-        }       
-            
-        
-       
+        var input = context.ReadValue<Vector2>();
+        MousePosition = new Vector2(input.x, input.y);
     }
 
     public void OnMovement(InputAction.CallbackContext context)
@@ -111,6 +75,12 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
         var input = context.ReadValue<Vector2>();
 
         Movement = new Vector2(input.x, input.y).normalized;
+    }
+
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        ShootButton.IsPressed = context.ReadValueAsButton();
+        StartCoroutine(ResetButton(ShootButton));
     }
 
     public void OnPause(InputAction.CallbackContext context)
