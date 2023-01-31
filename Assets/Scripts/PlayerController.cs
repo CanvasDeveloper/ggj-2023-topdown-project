@@ -68,6 +68,13 @@ public class PlayerController : MonoBehaviour
         if (health.IsDie)
             return;
 
+        if (_inputReference.PauseButton.IsPressed)
+        {
+            //Preguica :)
+            Debug.Log("Pause");
+            GameManager.Instance.PauseResume();
+        }
+
         if (GameManager.Instance && GameManager.Instance.Paused)
             return;
 
@@ -75,12 +82,6 @@ public class PlayerController : MonoBehaviour
 
         UpdatePlayerRotation();
         UpdateSpriteSide();
-
-        if (_inputReference.PauseButton.IsPressed)
-        {
-            //Preguica :)
-            GameManager.Instance.PauseResume();
-        }
 
         if (_inputReference.ShootButton.IsPressed)
         {
