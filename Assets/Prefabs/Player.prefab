@@ -1530,6 +1530,8 @@ GameObject:
   - component: {fileID: 5570661667942078374}
   - component: {fileID: 5570661667942078372}
   - component: {fileID: 5570661668056615261}
+  - component: {fileID: 9029910920947598749}
+  - component: {fileID: 5570661668056615262}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1618,6 +1620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 10
+  destroyOnDie: 0
+  spawnVFXPrefab: {fileID: 0}
 --- !u!114 &5570661667942078372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,6 +1660,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 32.118973, y: 39.67179}
   m_EdgeRadius: 0
+--- !u!114 &9029910920947598749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5570661667942078397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d443f0e36c2cd4da0b7487435cb833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sRenderer: {fileID: 6120986513544030653}
+  speed: 4
+  glow: 2
+--- !u!114 &5570661668056615262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5570661667942078397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d443f0e36c2cd4da0b7487435cb833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sRenderer: {fileID: 8868423268520565492}
+  speed: 4
+  glow: 2
 --- !u!1 &6445072636327540838
 GameObject:
   m_ObjectHideFlags: 0
