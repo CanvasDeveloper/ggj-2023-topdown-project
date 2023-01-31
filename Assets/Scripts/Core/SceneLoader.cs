@@ -31,6 +31,11 @@ public class SceneLoader : Singleton<SceneLoader>
         LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void LoadTitle()
+    {
+        LoadScene(0);
+    }
+
     private void LoadScene(int sceneIndex)
     {
         if (isLoadingScene)
