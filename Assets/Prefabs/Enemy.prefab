@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &814216647132228445
 Transform:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CurrentHealth>k__BackingField: 1
-  <MaxHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 5
 --- !u!114 &1080761526
 MonoBehaviour:
   m_ObjectHideFlags: 0

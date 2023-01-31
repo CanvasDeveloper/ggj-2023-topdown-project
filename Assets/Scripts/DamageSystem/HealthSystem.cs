@@ -46,6 +46,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     {
         OnDie?.Invoke();
         IsDie = true;
+        Destroy(this.gameObject);
     }
 
     /// <summary>

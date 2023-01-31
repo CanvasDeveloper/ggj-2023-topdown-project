@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 236371105}
   - component: {fileID: 236371107}
   - component: {fileID: 236371108}
+  - component: {fileID: 236371109}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Tree
@@ -498,11 +499,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpBar: {fileID: 4209433268088719515}
-  xpBarMax: 0
+  xpBarMax: 100
   xpBarCurrent: 0
   lifeBar: {fileID: 1234827346}
   lifeBarMax: 50
   lifeBarCurrent: 0
+  <CurrentHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 100
+--- !u!114 &236371109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236371104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d443f0e36c2cd4da0b7487435cb833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sRenderer: {fileID: 236371105}
+  speed: 4
+  glow: 2
 --- !u!1 &398637889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,7 +2590,7 @@ GameObject:
   - component: {fileID: 1694969210}
   m_Layer: 0
   m_Name: Tree2
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3503,7 +3521,7 @@ MonoBehaviour:
   enemyList:
   - {fileID: 5761815682464019873}
   - {fileID: 5761815682414190600}
-  prefabEnemy: {fileID: 5761815682464019873}
+  prefabEnemy: {fileID: 7414994079017097925, guid: 8561c46341acaed4d9486e3edeb1ee14, type: 3}
   delaySpawn: 0.5
   numberEnemythisWave: 0400000000000000
 --- !u!1 &2959231099773664545
@@ -4175,8 +4193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b465a1e73d400a6448064fb16177bf3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CurrentHealth>k__BackingField: 1
-  <MaxHealth>k__BackingField: 0
+  <CurrentHealth>k__BackingField: 5
+  <MaxHealth>k__BackingField: 5
 --- !u!212 &8350296724940414596
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -24,15 +24,26 @@ public class TreeController : MonoBehaviour, IDamageable
     public event Action OnHeal;
     public event Action OnDie;
 
-    public float CurrentHealth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public float MaxHealth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public bool IsDie { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    [field: SerializeField] public float CurrentHealth { get; set; }
+    [field: SerializeField] public float MaxHealth { get; set; }
+    public bool IsDie { get; set; }
 
     private void Start()
     {
         //so para teste
         lifeBarCurrent = lifeBarMax;
-        SetlifeBar();
+        CurrentHealth = MaxHealth;
+        SetlifeBar(CurrentHealth,MaxHealth);
+    }
+
+    private void OnEnable()
+    {
+        OnChangeHealth += SetlifeBar;
+    }
+
+    private void OnDisable()
+    {
+        OnChangeHealth -= SetlifeBar;
     }
 
     public void SetAddXp()
@@ -40,23 +51,38 @@ public class TreeController : MonoBehaviour, IDamageable
         xpBar.fillAmount = (float)xpBarCurrent / xpBarMax;
     }
 
-    public void SetlifeBar()
+    public void SetlifeBar(float currrentHealth, float maxHealth)
     {
-        lifeBar.fillAmount = (float)lifeBarCurrent / lifeBarMax;
+        lifeBar.fillAmount = currrentHealth / maxHealth;
     }
 
     public void TakeDamage(float damage)
     {
-        throw new NotImplementedException();
+        CurrentHealth -= damage;
+        if (CurrentHealth < 0)
+        {
+            Die();
+            return;
+        }
+
+        OnTakeDamage?.Invoke();
+        OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
     }
 
     public void Heal(float amount)
     {
-        throw new NotImplementedException();
+
+        CurrentHealth += amount;
+        if (CurrentHealth > MaxHealth)
+            CurrentHealth = MaxHealth;
+
+        OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
+        OnHeal?.Invoke();
     }
 
     public void Die()
     {
-        throw new NotImplementedException();
+        IsDie = true;
+        OnDie?.Invoke();
     }
 }
