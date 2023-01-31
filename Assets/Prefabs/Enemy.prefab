@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CurrentHealth>k__BackingField: 0
-  <MaxHealth>k__BackingField: 5
+  <MaxHealth>k__BackingField: 3
   destroyOnDie: 1
 --- !u!114 &1080761526
 MonoBehaviour:
