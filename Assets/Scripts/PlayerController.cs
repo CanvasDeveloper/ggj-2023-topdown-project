@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator IE_CanShoot()
     {
         isCanShoot = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(reloadWeapon);
         isCanShoot = true;
     }
 }

@@ -1601,7 +1601,7 @@ MonoBehaviour:
   gunPivot: {fileID: 5050508120245042869}
   bulletSpeed: 5
   BulletDamage: 5
-  reloadWeapon: 5
+  reloadWeapon: 0.2
   delayWeapon: 5
   isLookingLeft: 1
 --- !u!114 &5570661667942078374

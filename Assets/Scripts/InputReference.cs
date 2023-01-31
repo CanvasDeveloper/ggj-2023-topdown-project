@@ -80,7 +80,7 @@ public class InputReference : MonoBehaviour, PlayerInputMap.IGameplayActions
     public void OnShoot(InputAction.CallbackContext context)
     {
         ShootButton.IsPressed = context.ReadValueAsButton();
-        StartCoroutine(ResetButton(ShootButton));
+        //StartCoroutine(ResetButton(ShootButton));
     }
 
     public void OnPause(InputAction.CallbackContext context)
