@@ -266,7 +266,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  distanceToTree: 40
   treeMother: {fileID: 0}
+  isLookingLeft: 1
 --- !u!114 &244517973441457761
 MonoBehaviour:
   m_ObjectHideFlags: 0
