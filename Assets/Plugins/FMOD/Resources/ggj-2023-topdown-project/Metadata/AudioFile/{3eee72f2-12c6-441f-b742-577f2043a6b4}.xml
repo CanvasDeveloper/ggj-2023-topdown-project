@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3eee72f2-12c6-441f-b742-577f2043a6b4}">
+		<property name="assetPath">
+			<value>Shot B.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.53333333333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9dd548a9-033f-446f-beed-0c658dec676c}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -15,13 +15,14 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 3207245728547959031}
   - {fileID: 1405623175960073639}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: 4377262998185273465}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1405623175960073639}
   StringsBanks:
   - {fileID: 3207245728547959031}
-  cacheTime: 638106628369929061
+  cacheTime: 638107154246614424
   cacheVersion: 131601
 --- !u!114 &1405623175960073639
 MonoBehaviour:
@@ -38,10 +39,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Resources/ggj-2023-topdown-project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638106628369919080
+  lastModified: 638107154246594490
   FileSizes:
   - Name: Desktop
-    Value: 1588
+    Value: 47072
   Exists: 1
 --- !u!114 &3207245728547959031
 MonoBehaviour:
@@ -58,8 +59,35 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Resources/ggj-2023-topdown-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638106628369929061
+  lastModified: 638107154246614424
   FileSizes:
   - Name: Desktop
-    Value: 868
+    Value: 916
   Exists: 1
+--- !u!114 &4377262998185273465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shoot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shoot
+  Guid:
+    Data1: 1094462177
+    Data2: 1165211352
+    Data3: 174304682
+    Data4: -417799533
+  Banks:
+  - {fileID: 1405623175960073639}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
