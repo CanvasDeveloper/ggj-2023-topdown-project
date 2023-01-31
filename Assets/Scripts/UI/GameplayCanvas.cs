@@ -6,6 +6,8 @@ public class GameplayCanvas : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private Button backgroundButton;
+    [SerializeField] private Button tryAgainButton;
+    [SerializeField] private Button quitToMenuButton;
 
     /// <summary>
     /// Interface do sistema de vida
@@ -16,8 +18,9 @@ public class GameplayCanvas : MonoBehaviour
     {
         DisableAll();
 
-        if(backgroundButton)
-            backgroundButton.onClick.AddListener(HandlePauseUIButton);
+        backgroundButton.onClick.AddListener(HandlePauseUIButton);
+        tryAgainButton.onClick.AddListener(TryAgain);
+        quitToMenuButton.onClick.AddListener(QuitToMenu);
 
         GameManager.Instance.OnPauseStatusChange += HandlePauseUI;
     }
@@ -47,6 +50,16 @@ public class GameplayCanvas : MonoBehaviour
     private void HandlePauseUIButton()
     {
         GameManager.Instance.PauseResume();
+    }
+
+    private void TryAgain()
+    {
+        SceneLoader.Instance.ReloadScene();
+    }
+
+    private void QuitToMenu()
+    {
+        SceneLoader.Instance.LoadTitle();
     }
 
     /// <summary>
