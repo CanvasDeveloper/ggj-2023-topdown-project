@@ -15,6 +15,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public event Action OnTakeDamage;
     public event Action OnHeal;
 
+    [SerializeField] private bool destroyOnDie;
+
     private void Start()
     {
         CurrentHealth = MaxHealth;
@@ -46,7 +48,9 @@ public class HealthSystem : MonoBehaviour, IDamageable
     {
         OnDie?.Invoke();
         IsDie = true;
-        Destroy(this.gameObject);
+
+        if(destroyOnDie) //evita que o player seja destruido
+            Destroy(this.gameObject);
     }
 
     /// <summary>
