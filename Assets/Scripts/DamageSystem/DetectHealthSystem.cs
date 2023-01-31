@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using NaughtyAttributes;
 
 public class DetectHealthSystem : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class DetectHealthSystem : MonoBehaviour
     [Tooltip("Quantidade de cura")]
     [SerializeField] private float heal;
 
+    [SerializeField] private bool destroyOnCollide = true;
+    
+    [ShowIf("destroyOnCollide")]
+    [SerializeField] private GameObject spawnEffectPrefab;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (type != DetectionType.Collision)
@@ -24,6 +30,8 @@ public class DetectHealthSystem : MonoBehaviour
             damageable.TakeDamage(damage);
             damageable.Heal(heal);
         }
+
+        DestroyObject();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,5 +44,18 @@ public class DetectHealthSystem : MonoBehaviour
             damageable.TakeDamage(damage);
             damageable.Heal(heal);
         }
+
+        DestroyObject();
+    }
+
+    private void DestroyObject()
+    {
+        if (!destroyOnCollide)
+            return;
+
+        if (spawnEffectPrefab)
+            Instantiate(spawnEffectPrefab, transform.position, Quaternion.identity);
+
+        Destroy(gameObject);
     }
 }
