@@ -13,8 +13,8 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
-  - 
+  - PlayerBullet
+  - EnemyBullet
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1298232669
+    locked: 0
+  - name: Bullets
+    uniqueID: 2092014525
     locked: 0
   - name: Tree2
     uniqueID: 2611212801
