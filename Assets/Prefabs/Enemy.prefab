@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 438764860835956569}
   - component: {fileID: -3842274827073763623}
   - component: {fileID: 1080761526}
+  - component: {fileID: 244517973441457761}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -248,8 +249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b465a1e73d400a6448064fb16177bf3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CurrentHealth>k__BackingField: 1
+  <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 5
+  destroyOnDie: 1
 --- !u!114 &1080761526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,3 +266,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   treeMother: {fileID: 0}
+--- !u!114 &244517973441457761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414994079017097925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d443f0e36c2cd4da0b7487435cb833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sRenderer: {fileID: 6553717813164155977}
+  speed: 4
+  glow: 2
