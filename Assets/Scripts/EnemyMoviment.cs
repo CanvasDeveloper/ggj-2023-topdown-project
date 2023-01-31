@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +12,16 @@ public class EnemyMoviment : MonoBehaviour
     [SerializeField] Transform treeMother;
     [SerializeField] private bool isLookingLeft;
 
+    [SerializeField] private float damage = 1;
+    [SerializeField] private float timeToAttack = 0.5f;
+    private TreeController tree;
+
+    private bool canHit = true;
+
     private void OnEnable()
     {
         treeMother = GameObject.FindGameObjectWithTag("Tree").transform;
+        tree = treeMother.GetComponent<TreeController>();
     }
     private void Update()
     {
@@ -22,13 +30,23 @@ public class EnemyMoviment : MonoBehaviour
         if (Vector3.Distance(transform.position, treeMother.position) < distanceToTree)
         {
             //perto da arvore
-            
-
+            if (canHit)
+            {
+                tree.TakeDamage(damage);
+                canHit = false;
+                StartCoroutine(WaitForHit());
+            }
 
             return;
         }
 
         transform.position = Vector3.MoveTowards(transform.position, treeMother.position, speed * Time.deltaTime);
+    }
+
+    private IEnumerator WaitForHit()
+    {
+        yield return new WaitForSeconds(timeToAttack);
+        canHit = true;
     }
 
     private void Flip()
