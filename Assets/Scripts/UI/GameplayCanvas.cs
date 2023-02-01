@@ -5,6 +5,7 @@ public class GameplayCanvas : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject deathPanel;
+    [SerializeField] private GameObject hudIngame;
     [SerializeField] private Button backgroundButton;
     [SerializeField] private Button tryAgainButton;
     [SerializeField] private Button quitToMenuButton;
@@ -23,6 +24,7 @@ public class GameplayCanvas : MonoBehaviour
         quitToMenuButton.onClick.AddListener(QuitToMenu);
 
         GameManager.Instance.OnPauseStatusChange += HandlePauseUI;
+        GameManager.Instance.OnDead += OpenDeathScreen;
     }
 
     private void OnEnable()
@@ -100,5 +102,6 @@ public class GameplayCanvas : MonoBehaviour
     {
         pausePanel.SetActive(false);
         deathPanel.SetActive(false);
+        hudIngame.SetActive(false);
     }
 }

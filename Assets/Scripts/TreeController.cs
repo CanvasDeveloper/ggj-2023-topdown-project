@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using NaughtyAttributes;
 using System;
 
-public class TreeController : MonoBehaviour, IDamageable
+public class TreeController : Singleton<TreeController>, IDamageable
 {
     [HorizontalLine(1, EColor.Green)]
     [SerializeField] private Image xpBar;
@@ -16,8 +16,6 @@ public class TreeController : MonoBehaviour, IDamageable
 
     [HorizontalLine(1, EColor.Red)]
     [SerializeField] private Image lifeBar;
-    [SerializeField] private int lifeBarMax;
-    [SerializeField] private int lifeBarCurrent;
 
     public event Action<float, float> OnChangeHealth;
     public event Action OnTakeDamage;
@@ -30,8 +28,7 @@ public class TreeController : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        //so para teste
-        lifeBarCurrent = lifeBarMax;
+      
         CurrentHealth = MaxHealth;
         SetlifeBar(CurrentHealth,MaxHealth);
     }
@@ -46,8 +43,20 @@ public class TreeController : MonoBehaviour, IDamageable
         OnChangeHealth -= SetlifeBar;
     }
 
-    public void SetAddXp()
+    public void SetAddXp(int xp)
     {
+        if(xpBarCurrent > xpBarMax)
+        {
+            return;
+        }
+        else
+        {
+            xpBarCurrent += xp;
+            if(xpBarCurrent > xpBarMax)
+            {
+                xpBarCurrent = xpBarMax;
+            }
+        }
         xpBar.fillAmount = (float)xpBarCurrent / xpBarMax;
     }
 

@@ -502,8 +502,6 @@ MonoBehaviour:
   xpBarMax: 100
   xpBarCurrent: 0
   lifeBar: {fileID: 1234827346}
-  lifeBarMax: 50
-  lifeBarCurrent: 0
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 100
 --- !u!114 &236371109
@@ -3092,6 +3090,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1221702427}
     m_Modifications:
+    - target: {fileID: 528942230612266195, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 528942232615095161, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}
       propertyPath: m_Name
       value: GameplayCanvas
@@ -3180,6 +3182,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3826932599513170892, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4736913215493641126, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3202,7 +3208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4736913215493641126, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -263.0325
       objectReference: {fileID: 0}
     - target: {fileID: 7383053772863847796, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3226,7 +3232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7383053772863847796, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -247.83249
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}

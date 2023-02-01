@@ -17,6 +17,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
     [SerializeField] private bool destroyOnDie;
 
+    [SerializeField] private int enemyXp;
+
     private void Start()
     {
         CurrentHealth = MaxHealth;
@@ -48,6 +50,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     {
         OnDie?.Invoke();
         IsDie = true;
+        TreeController.Instance.SetAddXp(enemyXp);
 
         if(destroyOnDie) //evita que o player seja destruido
             Destroy(this.gameObject);

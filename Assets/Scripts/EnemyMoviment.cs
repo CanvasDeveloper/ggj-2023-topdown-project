@@ -14,14 +14,14 @@ public class EnemyMoviment : MonoBehaviour
 
     [SerializeField] private float damage = 1;
     [SerializeField] private float timeToAttack = 0.5f;
-    private TreeController tree;
+   
 
     private bool canHit = true;
 
     private void OnEnable()
     {
-        treeMother = GameObject.FindGameObjectWithTag("Tree").transform;
-        tree = treeMother.GetComponent<TreeController>();
+        treeMother = TreeController.Instance.transform;
+      
     }
     private void Update()
     {
@@ -32,7 +32,7 @@ public class EnemyMoviment : MonoBehaviour
             //perto da arvore
             if (canHit)
             {
-                tree.TakeDamage(damage);
+                TreeController.Instance.TakeDamage(damage);
                 canHit = false;
                 StartCoroutine(WaitForHit());
             }

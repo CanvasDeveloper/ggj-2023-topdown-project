@@ -253,6 +253,7 @@ MonoBehaviour:
   <CurrentHealth>k__BackingField: 0
   <MaxHealth>k__BackingField: 3
   destroyOnDie: 1
+  enemyXp: 10
 --- !u!114 &1080761526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +270,8 @@ MonoBehaviour:
   distanceToTree: 40
   treeMother: {fileID: 0}
   isLookingLeft: 1
+  damage: 1
+  timeToAttack: 0.5
 --- !u!114 &244517973441457761
 MonoBehaviour:
   m_ObjectHideFlags: 0
