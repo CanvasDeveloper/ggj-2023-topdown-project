@@ -11,7 +11,7 @@ public class TreeController : Singleton<TreeController>, IDamageable
     [HorizontalLine(1, EColor.Green)]
     [SerializeField] private Image xpBar;
     [SerializeField] private int xpBarMax;
-    [SerializeField] private int xpBarCurrent;
+     public int xpBarCurrent;
     [HorizontalLine(1, EColor.Green)]
 
     [HorizontalLine(1, EColor.Red)]
@@ -45,18 +45,14 @@ public class TreeController : Singleton<TreeController>, IDamageable
 
     public void SetAddXp(int xp)
     {
-        if(xpBarCurrent > xpBarMax)
-        {
-            return;
-        }
-        else
-        {
+     
             xpBarCurrent += xp;
-            if(xpBarCurrent > xpBarMax)
+            if(xpBarCurrent >= xpBarMax)
             {
+                GameManager.Instance.PowerUP();
                 xpBarCurrent = xpBarMax;
             }
-        }
+        
         xpBar.fillAmount = (float)xpBarCurrent / xpBarMax;
     }
 
@@ -93,5 +89,6 @@ public class TreeController : Singleton<TreeController>, IDamageable
     {
         IsDie = true;
         OnDie?.Invoke();
+        GameManager.Instance.GameOver();
     }
 }

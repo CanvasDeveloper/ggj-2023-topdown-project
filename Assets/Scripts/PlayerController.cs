@@ -15,7 +15,7 @@ public class SpriteRotationHandler
 [RequireComponent(typeof(InputReference))]
 public class PlayerController : MonoBehaviour
 {
-    //Como não vai ter save até então,bobeira Scriptable
+
     [Header("Player Status")]
     [SerializeField] private float moveSpeed = 5f;
 
@@ -34,10 +34,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform gunPivot;
 
     //Ambos ainda colocados aqui para registro de variaveis
-    [SerializeField] private float bulletSpeed = 5f;
-    [SerializeField] private float BulletDamage = 5f;
+    public float bulletSpeed = 5f;
+    public float BulletDamage = 5f;
     [SerializeField] private float reloadWeapon = 5f;
-    [SerializeField] private float delayWeapon = 5f;
+    [SerializeField] public float delayWeapon = 5f;
 
     private bool isCanShoot = true;
     private Camera main;
@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
                 return;
 
             GameObject temp = Instantiate(bulletPrefab, bulletPoisiton.position, bulletPoisiton.rotation);
+           
             Debug.Log("apertou mouse");
             StartCoroutine(IE_CanShoot());
         }

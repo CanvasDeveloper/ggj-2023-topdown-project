@@ -5,6 +5,8 @@ public class GameManager : Singleton<GameManager>
 {
     public event Action<bool> OnPauseStatusChange;
     public event Action OnDead;
+    public event Action OnPowerUP;
+    public event Action Next;
     public bool Paused { get; private set; }
 
     private void Start()
@@ -32,12 +34,22 @@ public class GameManager : Singleton<GameManager>
         OnPauseStatusChange?.Invoke(Paused);
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         Paused = true;
         Time.timeScale = 0;
         OnPauseStatusChange?.Invoke(Paused);
         OnDead?.Invoke();
+    }
+
+    public void PowerUP()
+    {
+        OnPowerUP?.Invoke();
+    }
+
+    public void Wave()
+    {
+        Next?.Invoke();
     }
 
     public void PauseResume()

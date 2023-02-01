@@ -20,6 +20,16 @@ public class DetectHealthSystem : MonoBehaviour
     [ShowIf("destroyOnCollide")]
     [SerializeField] private GameObject spawnEffectPrefab;
 
+    private void Start()
+    {
+        //teste de mudanças de dano
+       damage = PowerUpController.Instance.m_player.BulletDamage;
+      
+
+    }
+
+  
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (type != DetectionType.Collision)

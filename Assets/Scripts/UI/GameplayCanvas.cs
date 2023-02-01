@@ -6,9 +6,13 @@ public class GameplayCanvas : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private GameObject hudIngame;
+    [SerializeField] private GameObject hudPowerUP;
     [SerializeField] private Button backgroundButton;
     [SerializeField] private Button tryAgainButton;
     [SerializeField] private Button quitToMenuButton;
+
+    public GameObject painelChoiceCards;
+
 
     /// <summary>
     /// Interface do sistema de vida
@@ -25,6 +29,8 @@ public class GameplayCanvas : MonoBehaviour
 
         GameManager.Instance.OnPauseStatusChange += HandlePauseUI;
         GameManager.Instance.OnDead += OpenDeathScreen;
+        GameManager.Instance.OnPowerUP += PowerUpUI;
+        GameManager.Instance.Next += NextWave;
     }
 
     private void OnEnable()
@@ -92,7 +98,37 @@ public class GameplayCanvas : MonoBehaviour
     private void OpenDeathScreen()
     {
         DisableAll();
+        hudIngame.SetActive(false);
         deathPanel.SetActive(true);
+    }
+
+    public void PowerUpUI()
+    {
+        
+        hudPowerUP.SetActive(true);
+      
+        Time.timeScale = 0;
+        for (int i = 0; i < 3;i++)
+            {
+           int range = Random.Range(0, PowerUpController.Instance.cardList.Count);
+          Instantiate(PowerUpController.Instance.cardList[range], painelChoiceCards.transform);
+            
+            }
+       
+    }
+    public void NextWave()
+    {
+        Time.timeScale = 1;
+        hudPowerUP.SetActive(false);
+        foreach (Transform child in painelChoiceCards.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        WaveSpawner.Instance.isEndWave = false;
+        WaveSpawner.Instance.currWave++;
+        TreeController.Instance.xpBarCurrent = 0;
+        WaveSpawner.Instance.GenerateWave();
+      
     }
 
     /// <summary>
@@ -102,6 +138,6 @@ public class GameplayCanvas : MonoBehaviour
     {
         pausePanel.SetActive(false);
         deathPanel.SetActive(false);
-        hudIngame.SetActive(false);
+      
     }
 }

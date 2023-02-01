@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveSpawner : MonoBehaviour
+public class WaveSpawner : Singleton<WaveSpawner>
 {
     public List<Enemy> enemies = new List<Enemy>();
     public int currWave;
@@ -19,9 +19,14 @@ public class WaveSpawner : MonoBehaviour
     private float spawnTimer;
 
     public List<GameObject> spawnedEnemies = new List<GameObject>();
+
+    //espera de uma nova wave
+    public bool isEndWave;
+
     // Start is called before the first frame update
     void Start()
     {
+        currWave++;
         GenerateWave();
     }
 
@@ -49,6 +54,7 @@ public class WaveSpawner : MonoBehaviour
             }
             else
             {
+               
                 waveTimer = 0; // if no enemies remain, end wave
             }
         }
@@ -58,9 +64,14 @@ public class WaveSpawner : MonoBehaviour
             waveTimer -= Time.fixedDeltaTime;
         }
 
-        if (waveTimer <= 0 && spawnedEnemies.Count <= 0)
+        if (waveTimer <= 0 && spawnedEnemies.Count <= 0 && !isEndWave)
         {
+            isEndWave = true;
+          
+
             currWave++;
+
+
             GenerateWave();
         }
     }
@@ -68,6 +79,7 @@ public class WaveSpawner : MonoBehaviour
     public void GenerateWave()
     {
         waveValue = currWave * valuePerWave;
+       
         GenerateEnemies();
 
         spawnInterval = waveDuration / enemiesToSpawn.Count; // gives a fixed time between each enemies
