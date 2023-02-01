@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 {
 
     [Header("Player Status")]
+    public int playerLevel = 1;
     [SerializeField] private float moveSpeed = 5f;
 
     [HorizontalLine(1, EColor.Green)]

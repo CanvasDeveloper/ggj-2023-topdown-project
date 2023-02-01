@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpBar: {fileID: 4209433268088719515}
-  xpBarMax: 30
+  xpBarMax: 10
   xpBarCurrent: 0
   lifeBar: {fileID: 1234827346}
   <CurrentHealth>k__BackingField: 0
@@ -3508,7 +3508,7 @@ MonoBehaviour:
   - {fileID: 2046540917}
   - {fileID: 448655205}
   spawnIndex: 0
-  valuePerWave: 2
+  valuePerWave: 6
   waveDuration: 2
   spawnedEnemies: []
   isEndWave: 0
@@ -3625,6 +3625,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2476203229886104110, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5570661667942078393, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
       propertyPath: bulletSpeed
       value: 1

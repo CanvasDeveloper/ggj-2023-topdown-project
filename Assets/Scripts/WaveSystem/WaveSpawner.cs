@@ -64,9 +64,9 @@ public class WaveSpawner : Singleton<WaveSpawner>
             waveTimer -= Time.fixedDeltaTime;
         }
 
-        if (waveTimer <= 0 && spawnedEnemies.Count <= 0 && !isEndWave)
+        if (waveTimer <= 0 && spawnedEnemies.Count <= 0 )
         {
-            isEndWave = true;
+            
           
 
             currWave++;

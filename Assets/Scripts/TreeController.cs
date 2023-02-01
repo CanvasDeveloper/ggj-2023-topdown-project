@@ -10,7 +10,7 @@ public class TreeController : Singleton<TreeController>, IDamageable
 {
     [HorizontalLine(1, EColor.Green)]
     [SerializeField] private Image xpBar;
-    [SerializeField] private int xpBarMax;
+    public int xpBarMax;
      public int xpBarCurrent;
     [HorizontalLine(1, EColor.Green)]
 

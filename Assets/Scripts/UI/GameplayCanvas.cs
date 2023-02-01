@@ -104,6 +104,7 @@ public class GameplayCanvas : MonoBehaviour
 
     public void PowerUpUI()
     {
+        PowerUpController.Instance.m_player.playerLevel += 1;
         
         hudPowerUP.SetActive(true);
       
@@ -127,6 +128,19 @@ public class GameplayCanvas : MonoBehaviour
         WaveSpawner.Instance.isEndWave = false;
         WaveSpawner.Instance.currWave++;
         TreeController.Instance.xpBarCurrent = 0;
+        if(PowerUpController.Instance.m_player.playerLevel <= 20)
+        {
+            TreeController.Instance.xpBarMax += 10;
+        }
+        else if(PowerUpController.Instance.m_player.playerLevel <= 40)
+        {
+            TreeController.Instance.xpBarMax += 13;
+        }
+        else if (PowerUpController.Instance.m_player.playerLevel > 41)
+        {
+            TreeController.Instance.xpBarMax += 16;
+        }
+       
         WaveSpawner.Instance.GenerateWave();
       
     }
