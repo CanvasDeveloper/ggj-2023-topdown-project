@@ -3625,6 +3625,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1796322642349831512, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
+      propertyPath: delayAttack
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2476203229886104110, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
       propertyPath: m_Icon
       value: 

@@ -18,6 +18,12 @@ public class Card_WeaponDamageUP : MonoBehaviour
 
     }
 
+    public void SetActiveCenourita()
+    {
+        PowerUpController.Instance.m_player.patrono.SetActive(true);
+        GameManager.Instance.Wave();
+    }
+
 
 
 }
