@@ -9,6 +9,8 @@ public class GameManager : Singleton<GameManager>
     public event Action Next;
     public bool Paused { get; private set; }
 
+    private bool isPowerUp;
+
     private void Start()
     {
         QualitySettings.vSyncCount = 0;
@@ -44,11 +46,17 @@ public class GameManager : Singleton<GameManager>
 
     public void PowerUP()
     {
-        OnPowerUP?.Invoke();
+        if (!isPowerUp)
+        {
+            isPowerUp = true;
+            OnPowerUP?.Invoke();
+        }
+   
     }
 
     public void Wave()
     {
+        isPowerUp = false;
         Next?.Invoke();
     }
 
