@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -104,18 +105,32 @@ public class GameplayCanvas : MonoBehaviour
 
     public void PowerUpUI()
     {
-        PowerUpController.Instance.m_player.playerLevel += 1;
-        
-        hudPowerUP.SetActive(true);
-      
         Time.timeScale = 0;
-        for (int i = 0; i < 3;i++)
-            {
-           int range = Random.Range(0, PowerUpController.Instance.cardList.Count);
-          Instantiate(PowerUpController.Instance.cardList[range], painelChoiceCards.transform);
-            
-            }
+        PowerUpController.Instance.m_player.playerLevel += 1;
+
+        hudPowerUP.SetActive(true);
+        List<GameObject> newListHud = new List<GameObject>();
+        List<int> usedIndices = new List<int>();
        
+        while (newListHud.Count < 3)
+        {
+            int randomIndex = Random.Range(0, PowerUpController.Instance.cardList.Count);
+            if (!usedIndices.Contains(randomIndex))
+            {
+                newListHud.Add(PowerUpController.Instance.cardList[randomIndex]);
+                usedIndices.Add(randomIndex);
+
+            }
+
+        }
+
+        foreach (GameObject go in newListHud)
+        {
+            Instantiate(go, painelChoiceCards.transform);
+        }
+
+
+
     }
     public void NextWave()
     {

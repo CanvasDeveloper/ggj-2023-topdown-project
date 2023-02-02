@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1953103395066846229}
   - component: {fileID: 821557452559606478}
   - component: {fileID: -5801006373571797914}
+  - component: {fileID: 6430566547861473546}
   m_Layer: 8
   m_Name: BulletCenourita
   m_TagString: Untagged
@@ -283,3 +284,15 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &6430566547861473546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414994079017097925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7b2f718ec8eac438576b9263cd85dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
