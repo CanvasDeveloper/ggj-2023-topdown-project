@@ -13,4 +13,13 @@ public class Card_HearthTree : MonoBehaviour
         GameManager.Instance.Wave();
 
     }
+
+    public void SetMaxLifeTree(int valor)
+    {
+        TreeController.Instance.MaxHealth += valor;
+        TreeController.Instance.CurrentHealth = TreeController.Instance.MaxHealth;
+        TreeController.Instance.SetlifeBar(TreeController.Instance.CurrentHealth, TreeController.Instance.MaxHealth);
+        GameManager.Instance.Wave();
+
+    }
 }

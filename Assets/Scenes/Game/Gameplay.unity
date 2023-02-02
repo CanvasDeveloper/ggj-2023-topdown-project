@@ -3437,7 +3437,7 @@ MonoBehaviour:
   enemyList: []
   prefabEnemy: {fileID: 7414994079017097925, guid: 8561c46341acaed4d9486e3edeb1ee14, type: 3}
   delaySpawn: 0.5
-  numberEnemythisWave: 0400000000000000
+  numberEnemythisWave: 0400000008000000
 --- !u!1 &2959231099773664545
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,6 +3529,8 @@ MonoBehaviour:
   - {fileID: 7905112717597350914, guid: 598cb1d4bcd849647a60ab7a27ae177b, type: 3}
   - {fileID: 7905112717597350914, guid: 79c06454fc7782e4792e34562acea5f4, type: 3}
   - {fileID: 7905112717597350914, guid: 5193cd1ca084c134386000437a895e29, type: 3}
+  - {fileID: 7905112717597350914, guid: d3940e03849326f43b0da1a1b0523405, type: 3}
+  - {fileID: 7905112717597350914, guid: 741d921423911af478eb2a1945633466, type: 3}
 --- !u!4 &2959231100158568195
 Transform:
   m_ObjectHideFlags: 0
