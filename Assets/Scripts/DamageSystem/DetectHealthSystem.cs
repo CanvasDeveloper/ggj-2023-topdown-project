@@ -58,6 +58,11 @@ public class DetectHealthSystem : MonoBehaviour
         DestroyObject();
     }
 
+    public void SetChangeDamage(float valor)
+    {
+        damage += valor;
+    }
+
     private void DestroyObject()
     {
         if (!destroyOnCollide)

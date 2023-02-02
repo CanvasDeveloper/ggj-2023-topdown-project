@@ -22,4 +22,11 @@ public class Card_HearthTree : MonoBehaviour
         GameManager.Instance.Wave();
 
     }
+
+    public void SetSpeedPlayer(int valor)
+    {
+        PowerUpController.Instance.m_player.moveSpeed += valor;
+        GameManager.Instance.Wave();
+
+    }
 }
