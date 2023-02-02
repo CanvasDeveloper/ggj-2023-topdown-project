@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     [Header("Bullets")]
     //Para fins de teste
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform bulletPoisiton;
+    [SerializeField] private Transform[] bulletPoisiton;
     [SerializeField] private Transform gunPivot;
 
     //Ambos ainda colocados aqui para registro de variaveis
@@ -90,9 +90,16 @@ public class PlayerController : MonoBehaviour
         {
             if (!isCanShoot)
                 return;
+            for(int i=0; i < bulletPoisiton.Length; i++)
+            {
+                if (bulletPoisiton[i].gameObject.activeSelf == true)
+                {
+                    GameObject temp = Instantiate(bulletPrefab, bulletPoisiton[i].position, bulletPoisiton[i].rotation);
+                }
+               
 
-            GameObject temp = Instantiate(bulletPrefab, bulletPoisiton.position, bulletPoisiton.rotation);
-           
+            }
+
             Debug.Log("apertou mouse");
             StartCoroutine(IE_CanShoot());
         }
