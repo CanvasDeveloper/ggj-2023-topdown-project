@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Card_WeaponDamageUP : MonoBehaviour
 {
+
+    private int bulletIndexPosition;
+
    public void ChangeUPWeapon(int valor)
     {
         PowerUpController.Instance.m_player.BulletDamage += valor;
@@ -24,6 +27,26 @@ public class Card_WeaponDamageUP : MonoBehaviour
         GameManager.Instance.Wave();
     }
 
+    public void SetActiveBulletPosition()
+    {
+        if(PowerUpController.Instance.m_player.bulletPoisiton[PowerUpController.Instance.m_player.bulletPoisiton.Length].gameObject.activeSelf == true)
+        {
+            GameManager.Instance.Wave();
+            return;
+        }
 
+        foreach (Transform go in PowerUpController.Instance.m_player.bulletPoisiton)
+        {
+            if(go.gameObject.activeSelf == false)
+            {
+                go.gameObject.SetActive(true);
+                GameManager.Instance.Wave();
+                return;
+            }
+           
+        }
+       
+      
+    }
 
 }

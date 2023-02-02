@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     [Header("Bullets")]
     //Para fins de teste
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform[] bulletPoisiton;
+    public Transform[] bulletPoisiton;
     [SerializeField] private Transform gunPivot;
 
     //Ambos ainda colocados aqui para registro de variaveis

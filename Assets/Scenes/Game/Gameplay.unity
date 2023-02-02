@@ -3605,7 +3605,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959231099773664545}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff04076f44b37994da27e5dfc895273d, type: 3}
   m_Name: 
@@ -3656,6 +3656,8 @@ MonoBehaviour:
   - {fileID: 7905112717597350914, guid: 5193cd1ca084c134386000437a895e29, type: 3}
   - {fileID: 7905112717597350914, guid: d3940e03849326f43b0da1a1b0523405, type: 3}
   - {fileID: 7905112717597350914, guid: 741d921423911af478eb2a1945633466, type: 3}
+  - {fileID: 7905112717597350914, guid: d945a24955da90049ba21f7661983c82, type: 3}
+  - {fileID: 7905112717597350914, guid: e2644baa7f36f434b863e47c1d5acbc0, type: 3}
 --- !u!4 &2959231100158568195
 Transform:
   m_ObjectHideFlags: 0
@@ -3773,6 +3775,10 @@ PrefabInstance:
     - target: {fileID: 2476203229886104110, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
       propertyPath: m_Icon
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669154998635690073, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5570661667942078393, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
       propertyPath: bulletSpeed
