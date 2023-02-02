@@ -124,9 +124,8 @@ GameObject:
   - component: {fileID: 1953103395066846229}
   - component: {fileID: 821557452559606478}
   - component: {fileID: -5801006373571797914}
-  - component: {fileID: -5276671867475187496}
   m_Layer: 8
-  m_Name: Bullet
+  m_Name: BulletCenourita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +189,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ce00036fd39d404383f73c0766d4458, type: 3}
-  m_Color: {r: 1, g: 0.79941434, b: 0, a: 1}
+  m_Color: {r: 0.8584906, g: 0.39756897, b: 0.052643314, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -284,17 +283,3 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!114 &-5276671867475187496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414994079017097925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44e9322d1f968e41b1018bbc8220020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedBullet: 320
-  lifeTime: 4

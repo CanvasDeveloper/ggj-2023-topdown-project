@@ -100,6 +100,10 @@ public class CenouritaController : MonoBehaviour
             }
 
         }
+        else
+        {
+            isTouchPlayer = false;
+        }
 
 
 
@@ -116,10 +120,11 @@ public class CenouritaController : MonoBehaviour
         {
             isAttack = true;
             StartCoroutine(DelayAttack());
+            shotAttacking();
         }
 
 
-        shotAttacking();
+       
 
 
     }
@@ -154,6 +159,7 @@ public class CenouritaController : MonoBehaviour
         isDelay = true;
         yield return new WaitForSeconds(delayAttack);
         isDelay = false;
+        isAttack = false;
 
     }
 }

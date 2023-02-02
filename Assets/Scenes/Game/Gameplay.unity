@@ -3414,7 +3414,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959231099773664545}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7d8410ce0f06c541a48d7fbe4015aa5, type: 3}
   m_Name: 
@@ -3434,9 +3434,7 @@ MonoBehaviour:
   - {fileID: 1065405539}
   - {fileID: 2046540917}
   - {fileID: 448655205}
-  enemyList:
-  - {fileID: 0}
-  - {fileID: 0}
+  enemyList: []
   prefabEnemy: {fileID: 7414994079017097925, guid: 8561c46341acaed4d9486e3edeb1ee14, type: 3}
   delaySpawn: 0.5
   numberEnemythisWave: 0400000000000000
@@ -3482,7 +3480,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959231099773664545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff04076f44b37994da27e5dfc895273d, type: 3}
   m_Name: 
@@ -3626,9 +3624,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1796322642349831512, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
-      propertyPath: delayAttack
-      value: 5
+      propertyPath: shotSpeed
+      value: 4200
       objectReference: {fileID: 0}
+    - target: {fileID: 1796322642349831512, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
+      propertyPath: delayAttack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796322642349831512, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
+      propertyPath: prefabBullet
+      value: 
+      objectReference: {fileID: 7414994079017097925, guid: 8f8c8764269f6bf4084f0280c56e20d2, type: 3}
     - target: {fileID: 2476203229886104110, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
       propertyPath: m_Icon
       value: 
