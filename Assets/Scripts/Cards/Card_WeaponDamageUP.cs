@@ -24,7 +24,9 @@ public class Card_WeaponDamageUP : MonoBehaviour
     public void SetActiveCenourita()
     {
         PowerUpController.Instance.m_player.patrono.SetActive(true);
+        PowerUpController.Instance.cardList.Remove(PowerUpController.Instance.cardList[4]); //posição do card
         GameManager.Instance.Wave();
+  
     }
 
     public void SetCenouritaDelay(float valor)
