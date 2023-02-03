@@ -46,6 +46,7 @@ public class FadeController : MonoBehaviour
             {
                 go.SetActive(false);
             }
+            Destroy(spawnCut);
 
             terra.SetActive(false);
             spawnCut.SetActive(false);
