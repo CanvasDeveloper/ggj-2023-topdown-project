@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1753,7 +1753,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       chao_47: 1354678009
-      chao_55: 1246399315
       chao_20: -122694108
       chao_29: -924616140
       chao_48: -1917263784
@@ -1784,15 +1783,15 @@ TextureImporter:
       chao_73: 706418783
       chao_15: -348539270
       chao_25: -418865997
+      chao_59: 1481246569
       chao_21: 1246730238
       chao_19: 918576014
       chao_28: -41649092
       chao_61: -864462744
       chao_39: 1645400244
-      chao_3: -1713540695
       chao_32: 1017551334
       chao_75: 118744333
-      chao_59: 1481246569
+      chao_3: -1713540695
       chao_76: 1955396593
       chao_9: 1331008470
       chao_12: 313546112
@@ -1827,6 +1826,7 @@ TextureImporter:
       chao_24: 770389043
       chao_6: 1374419668
       chao_30: -542443449
+      chao_55: 1246399315
       chao_4: 1828817824
       chao_36: -237608939
       chao_51: -826852025
