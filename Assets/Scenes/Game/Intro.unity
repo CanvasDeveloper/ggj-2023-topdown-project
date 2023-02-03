@@ -513,6 +513,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueFinal.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].mesDuration
       value: 2.5
       objectReference: {fileID: 0}
@@ -526,7 +534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].DialogueLine
-      value: "paraistas de outro universo come\xE7ou\natacar o planeta..."
+      value: "parasitas de outro universo come\xE7ou\natacar o planeta..."
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].DialogueLine
@@ -539,6 +547,14 @@ PrefabInstance:
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[3].DialogueLine
       value: um local passifico...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[0].mesDuration
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[0].DialogueLine
+      value: "\rparasites from another universe began\r\nattack the planet..."
       objectReference: {fileID: 0}
     - target: {fileID: 3740586270690907963, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1706,6 +1722,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueFinal.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].mesDuration
       value: 2.5
       objectReference: {fileID: 0}
@@ -1725,7 +1749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].DialogueLine
-      value: mas um sobreviveu...
+      value: "restou o \xFAltimo sobrevivente..."
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[2].DialogueLine
@@ -1734,6 +1758,24 @@ PrefabInstance:
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[3].DialogueLine
       value: um local passifico...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[0].mesDuration
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[1].mesDuration
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[0].DialogueLine
+      value: 'many died..
+
+        (black screen to avoid sadness)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[1].DialogueLine
+      value: "the last survivor left\r..."
       objectReference: {fileID: 0}
     - target: {fileID: 3740586270690907963, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3845,6 +3887,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueFinal.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].mesDuration
       value: 2.5
       objectReference: {fileID: 0}
@@ -3871,6 +3921,32 @@ PrefabInstance:
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[3].DialogueLine
       value: um local passifico...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[0].mesDuration
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[1].mesDuration
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[2].mesDuration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[0].DialogueLine
+      value: "\rwhere there is a big tree\r\nwhere all beings are connected"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[1].DialogueLine
+      value: 'big tree has a huge magic
+
+        to keep the planet'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[2].DialogueLine
+      value: "\rBut something bad happened..."
       objectReference: {fileID: 0}
     - target: {fileID: 3740586270690907963, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4442,6 +4518,7 @@ GameObject:
   - component: {fileID: 1642303883}
   - component: {fileID: 1642303885}
   - component: {fileID: 1642303884}
+  - component: {fileID: 1642303886}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4489,7 +4566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Aperte <color=red>ESC</color> para sair
+  m_text: Press <color=red>ESC</color> to exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
   m_sharedMaterial: {fileID: 949865057681351409, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
@@ -4566,6 +4643,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642303882}
   m_CullTransparentMesh: 1
+--- !u!114 &1642303886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642303882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: ESC
+  FallbackText: Aperte <color=red>ESC</color> para sair
 --- !u!1 &1657909454
 GameObject:
   m_ObjectHideFlags: 0
@@ -5679,13 +5770,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 715103260, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: saveLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 715103260, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: currentLanguage
+      value: English
+      objectReference: {fileID: 0}
     - target: {fileID: 678625527131912904, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 678625527131912904, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_RootOrder
@@ -5873,10 +5968,10 @@ PrefabInstance:
       propertyPath: DialogueEnglish.Array.data[2].DialogueLine
       value: 'where several root species live
 
-        such as Potatoes, beets,
-        carrots
+        such as Potatoes, beets, carrots
 
-        among others...'
+        among
+        others...'
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[3].DialogueLine
