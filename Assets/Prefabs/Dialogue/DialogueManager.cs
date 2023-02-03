@@ -121,6 +121,7 @@ public class DialogueManager : MonoBehaviour
        
        if (_dialogueBox == null)
         {
+           
             yield break;
         }
 
@@ -161,18 +162,20 @@ public class DialogueManager : MonoBehaviour
        
             if (isFinalDialogue)
             {
-                Destroy(this.gameObject);
+                print("entrou aqui");
+                FadeController.Instance.StarFade();
+                //Destroy(this.gameObject);
             }
             
             yield break;
         }
 
-        if (_dialogueBox.DialogueText != null)
+        if (_dialogueBox.DialogueText1 != null)
         {
        
             _dialogueBox.FadeIn(FadeDuration);
         
-            _dialogueBox.DialogueText.text = Dialogue[_currentIndex].DialogueLine;
+            _dialogueBox.DialogueText1.text = Dialogue[_currentIndex].DialogueLine;
         }
     
         _currentIndex++;
