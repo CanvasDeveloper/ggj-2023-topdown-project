@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FadeController : Singleton<FadeController>
+public class FadeController : MonoBehaviour
 {
     public Animator _animator;
     public GameObject terra;
@@ -15,6 +15,7 @@ public class FadeController : Singleton<FadeController>
     public GameObject spawnCut;
     public bool isFinal;
     public bool isFinaltrue;
+    public bool isLoad;
     public bool isTerra;
    
     public void StarFade()
@@ -39,6 +40,7 @@ public class FadeController : Singleton<FadeController>
             FinalBackground.SetActive(true);
             dialogueFinal1.SetActive(true);
             _animator.SetTrigger("FadeIn");
+            isLoad = true;
             return;
         }
         if (isFinal)

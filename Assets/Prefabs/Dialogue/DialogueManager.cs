@@ -51,7 +51,7 @@ public class DialogueManager : MonoBehaviour
 
     private bool isTerra;
 
-
+    public FadeController fade;
 
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
@@ -166,7 +166,7 @@ public class DialogueManager : MonoBehaviour
        
             if (isFinalDialogue)
             {
-                if (FadeController.Instance.isFinaltrue)
+                if (fade.isLoad)
                 {
                     SceneManager.LoadScene(2);
                 }
@@ -175,13 +175,13 @@ public class DialogueManager : MonoBehaviour
                 if (!isTerra)
                 {
                     isTerra = true;
-                    FadeController.Instance.isTerra = true;
-                    FadeController.Instance.StarFade();
+                    fade.isTerra = true;
+                    fade.StarFade();
                 }
 
-                if (FadeController.Instance.isFinal)
+                if (fade.isFinal)
                 {
-                    FadeController.Instance.StarFade();
+                    fade.StarFade();
                     
                 }
                

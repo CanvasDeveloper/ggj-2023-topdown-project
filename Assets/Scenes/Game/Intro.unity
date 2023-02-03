@@ -457,6 +457,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1719030570}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: TextFont
       value: 
       objectReference: {fileID: 12800000, guid: a1a4e482d261b194b8ab12c636ef9e92, type: 3}
@@ -1643,6 +1647,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1719030570}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: TextFont
       value: 
@@ -3779,6 +3787,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1719030570}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: TextFont
       value: 
       objectReference: {fileID: 12800000, guid: a1a4e482d261b194b8ab12c636ef9e92, type: 3}
@@ -4909,6 +4921,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8472109106808589334, guid: fda0f01432c89f449acb20b537851274, type: 3}
   m_PrefabInstance: {fileID: 1719030568}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1719030570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6365257434910637918, guid: fda0f01432c89f449acb20b537851274, type: 3}
+  m_PrefabInstance: {fileID: 1719030568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9d71fd5530b434496aaabbc8061a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1729523359
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,6 +5527,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1719030570}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: TextFont
       value: 
