@@ -8,6 +8,8 @@ public class PowerUpController : Singleton<PowerUpController>
 
     public List<GameObject> cardList;
 
+    public StartGamePlay m_start; //Sono e preguiça
+
    
 
 }

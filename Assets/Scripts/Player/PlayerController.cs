@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         if (health.IsDie)
             return;
 
-        if (_inputReference.PauseButton.IsPressed)
+        if (_inputReference.PauseButton.IsPressed && PowerUpController.Instance.m_start.PainelStart.activeSelf == false)
         {
             //Preguica :)
             Debug.Log("Pause");
