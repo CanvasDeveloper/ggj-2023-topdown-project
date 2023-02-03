@@ -38,9 +38,11 @@ public class DialogueManager : MonoBehaviour
     public int _maxDialogueParty;
     public bool isNextDialogue;
 
-
+   
     public DialogueElement[] Dialogue;
-   // public DialogueElement[] Dialogue1;
+    public DialogueElement[] DialogueEnglish;
+    public DialogueElement[] DialogueFinal;
+    // public DialogueElement[] Dialogue1;
     public bool ButtonHandled;
 
     /// private variables
@@ -88,6 +90,32 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        if(Lean.Localization.LeanLocalization.GetFirstCurrentLanguage() == "Portuguese")
+        {
+            int index = 0;
+           foreach( DialogueElement c in Dialogue)
+            {
+
+                DialogueFinal[index].DialogueLine = c.DialogueLine;
+                DialogueFinal[index].mesDuration = c.mesDuration;
+                index++;
+            }
+
+        }
+        else
+        {
+            int index = 0;
+            foreach (DialogueElement c in DialogueEnglish)
+            {
+
+                DialogueFinal[index].DialogueLine = c.DialogueLine;
+                DialogueFinal[index].mesDuration = c.mesDuration;
+                index++;
+            }
+
+
+        }
+
         SetCreateDialogue();
         StartCoroutine(AutoNextDialogue());
     }
@@ -106,7 +134,7 @@ public class DialogueManager : MonoBehaviour
 
         _dialogueBox.transform.position = dialoguePosition.position;
         _dialogueBox.ChangeColor(TextBackgroundColor, TextColor);
-        _dialogueBox.DialogueText1.text = Dialogue[_currentIndex].DialogueLine;
+        _dialogueBox.DialogueText1.text = DialogueFinal[_currentIndex].DialogueLine;
         if (textfontPro != null)
         {
             _dialogueBox.DialogueText1.font = textfontPro;
@@ -196,8 +224,8 @@ public class DialogueManager : MonoBehaviour
        
             _dialogueBox.FadeIn(FadeDuration);
         
-            _dialogueBox.DialogueText1.text = Dialogue[_currentIndex].DialogueLine;
-            MessageDuration = Dialogue[_currentIndex].mesDuration;
+            _dialogueBox.DialogueText1.text = DialogueFinal[_currentIndex].DialogueLine;
+            MessageDuration = DialogueFinal[_currentIndex].mesDuration;
         }
     
         _currentIndex++;

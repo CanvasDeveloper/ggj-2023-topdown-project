@@ -5797,6 +5797,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueFinal.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: dialoguechange.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].mesDuration
       value: 1.5
       objectReference: {fileID: 0}
@@ -5828,6 +5840,49 @@ PrefabInstance:
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[3].DialogueLine
       value: um local passifico...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[0].mesDuration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[1].mesDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[2].mesDuration
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[3].mesDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[0].DialogueLine
+      value: 'Welcome!...
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[1].DialogueLine
+      value: 'this is the planet
+
+        called Root...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[2].DialogueLine
+      value: 'where several root species live
+
+        such as Potatoes, beets,
+        carrots
+
+        among others...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: DialogueEnglish.Array.data[3].DialogueLine
+      value: 'a peaceful place...
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3740586270690907963, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: m_LocalPosition.y

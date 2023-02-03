@@ -11,6 +11,8 @@ public class GameManager : Singleton<GameManager>
 
     private bool isPowerUp;
 
+    public Lean.Localization.LeanLocalization leanLocalization;
+
     private void Start()
     {
         QualitySettings.vSyncCount = 0;
