@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class FadeController : MonoBehaviour
 {
@@ -17,7 +19,17 @@ public class FadeController : MonoBehaviour
     public bool isFinaltrue;
     public bool isLoad;
     public bool isTerra;
-   
+
+
+
+    private void Update()
+    {
+        if (InputSystem.GetDevice<Keyboard>().escapeKey.wasPressedThisFrame )
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
     public void StarFade()
     {
 
