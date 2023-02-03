@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
 using MoreMountains.Tools;
@@ -10,6 +11,7 @@ public class DialogueElement
 {
     [Multiline]
     public string DialogueLine;
+    public float mesDuration;
 }
 public class DialogueManager : MonoBehaviour
 {
@@ -46,6 +48,8 @@ public class DialogueManager : MonoBehaviour
 
     public bool isFinalDialogue;
     public Collider2D boxDialogue;
+
+    private bool isTerra;
 
 
 
@@ -162,8 +166,25 @@ public class DialogueManager : MonoBehaviour
        
             if (isFinalDialogue)
             {
+                if (FadeController.Instance.isFinaltrue)
+                {
+                    SceneManager.LoadScene(2);
+                }
+
                 print("entrou aqui");
-                FadeController.Instance.StarFade();
+                if (!isTerra)
+                {
+                    isTerra = true;
+                    FadeController.Instance.isTerra = true;
+                    FadeController.Instance.StarFade();
+                }
+
+                if (FadeController.Instance.isFinal)
+                {
+                    FadeController.Instance.StarFade();
+                    
+                }
+               
                 //Destroy(this.gameObject);
             }
             
@@ -176,6 +197,7 @@ public class DialogueManager : MonoBehaviour
             _dialogueBox.FadeIn(FadeDuration);
         
             _dialogueBox.DialogueText1.text = Dialogue[_currentIndex].DialogueLine;
+            MessageDuration = Dialogue[_currentIndex].mesDuration;
         }
     
         _currentIndex++;

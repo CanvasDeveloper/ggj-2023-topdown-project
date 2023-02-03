@@ -28,9 +28,13 @@ public class TreeController : Singleton<TreeController>, IDamageable
 
     private void Start()
     {
-      
-        CurrentHealth = MaxHealth;
-        SetlifeBar(CurrentHealth,MaxHealth);
+
+        if (xpBar != null)
+        {
+            CurrentHealth = MaxHealth;
+            SetlifeBar(CurrentHealth, MaxHealth);
+        }
+       
     }
 
     private void OnEnable()
