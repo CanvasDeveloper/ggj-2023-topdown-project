@@ -6,7 +6,6 @@ public class ObjectPooler : Singleton<ObjectPooler>
     public List<Pool> pools;
     private Dictionary<string, Queue<GameObject>> poolDictionary;
 
-
     private void Start()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
@@ -35,13 +34,24 @@ public class ObjectPooler : Singleton<ObjectPooler>
         }
 
         GameObject objToSpawn = poolDictionary[tag].Dequeue();
+        while (objToSpawn.activeSelf == true)
+        {
+            objToSpawn = poolDictionary[tag].Dequeue();
+            if (poolDictionary[tag].Count == 0)
+            {
+                objToSpawn = Instantiate(poolDictionary[tag].Peek().gameObject);
+                objToSpawn.SetActive(false);
+                poolDictionary[tag].Enqueue(objToSpawn);
+                break;
+            }
+        }
 
         objToSpawn.transform.position = position;
         objToSpawn.transform.rotation = rotation;
         objToSpawn.SetActive(true);
 
         poolDictionary[tag].Enqueue(objToSpawn);
-
+        Debug.Log("count dic: " + poolDictionary[tag].Count);
         return objToSpawn;
     }
 }

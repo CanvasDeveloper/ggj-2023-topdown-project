@@ -8,18 +8,12 @@ public class StageController : MonoBehaviour
 {
     [SerializeField] List<Transform> spawnPonts = new List<Transform>();
 
-    [SerializeField] List<GameObject> enemyList = new List<GameObject>();
+    [SerializeField] Dictionary<IDamageable, GameObject> enemyList = new Dictionary<IDamageable, GameObject>();
 
     [HorizontalLine(1, EColor.Green)]
 
     [SerializeField] GameObject prefabEnemy;
     [SerializeField] float delaySpawn;
-
-    [HorizontalLine(1, EColor.Green)]
-
-    [SerializeField] List<int> numberEnemythisWave = new List<int>();
-    private int indexWave;
-     private int numberEnemythisWavecurrent;
 
     [HorizontalLine(1, EColor.Green)]
     [Header("Config Wave")]
@@ -40,46 +34,48 @@ public class StageController : MonoBehaviour
         yield return new WaitForSeconds(1);
         int totalEnemies = (int)(initialEnemies * (1 + Math.Log(currentWave + 1) * progressionRate));
         Debug.Log($"Total Enemies: {totalEnemies}");
+
+        int lastIDspawn = -1;
         for (int i = 0; i < totalEnemies; i++)
         {
-            int IDspawn= UnityEngine.Random.Range(0, spawnPonts.Count);
-            ObjectPooler.Instance.SpawnFromPool("EnemyPerto", spawnPonts[IDspawn].position, Quaternion.identity);
+            int IDspawn;
+            do
+            {
+                IDspawn = UnityEngine.Random.Range(0, spawnPonts.Count);
+            } while (IDspawn == lastIDspawn);
+            lastIDspawn = IDspawn;
+
+            var objEnemy = ObjectPooler.Instance.SpawnFromPool("EnemyPerto", spawnPonts[IDspawn].position, Quaternion.identity);
+            var enemy = objEnemy.GetComponent<IDamageable>();
+            enemy.OnDie += () => 
+            {
+                enemyList.Remove(enemy);     
+            };
+            yield return new WaitForSeconds(delaySpawn / (currentWave + 1));
         }
-        currentWave++;
-        if(currentWave < waveCount)
+
+        int remainingEnemies = 0;
+        foreach (var enemy in enemyList.Values)
         {
-            yield return new WaitForSeconds(5);
+            if (enemy != null)
+            {
+                remainingEnemies++;
+            }
+        }
+
+        if (remainingEnemies == 0)
+        {
+            currentWave++;
+            if (currentWave < waveCount)
+            {
+                yield return new WaitForSeconds(5);
+                StartCoroutine(IE_StartWave());
+            }
+        }
+        else
+        {
             StartCoroutine(IE_StartWave());
         }
     }
 
-    private IEnumerator IE_Began()
-    {
-        yield return new WaitForSeconds(1f);
-        if(numberEnemythisWavecurrent >= numberEnemythisWave[indexWave])
-        {
-            StopCoroutine(IE_Began());
-           
-        }
-        else
-        {
-            numberEnemythisWavecurrent++;
-
-            int temp = UnityEngine.Random.Range(0, 9);
-            if (enemyList.Count > 0)
-            {
-                enemyList[0].transform.position = spawnPonts[temp].position;
-                enemyList[0].SetActive(true);
-                enemyList.Remove(enemyList[0]);
-            }
-            else
-            {
-                Instantiate(prefabEnemy, spawnPonts[temp].position, spawnPonts[temp].rotation);
-            }
-            yield return new WaitForSeconds(delaySpawn);
-            StartCoroutine(IE_Began());
-        }
-       
-
-    }
 }
