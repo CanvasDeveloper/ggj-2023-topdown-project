@@ -413,7 +413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "mudar idioma\r"
+  m_text: change language
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
   m_sharedMaterial: {fileID: 949865057681351409, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
@@ -1123,7 +1123,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Som
+  m_text: 'Sound
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1216,58 +1218,6 @@ MonoBehaviour:
   FallbackText: 'Sound
 
 '
---- !u!1 &1086471133
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1086471134}
-  - component: {fileID: 1086471135}
-  m_Layer: 0
-  m_Name: change
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1086471134
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086471133}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2001354081}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1086471135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086471133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: 0
-  entries:
-  - Language: English
-    Text: change language
-    Object: {fileID: 0}
-  - Language: Portuguese
-    Text: "mudar idioma\r"
-    Object: {fileID: 0}
 --- !u!224 &1143908413 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5687365829898689629, guid: 3203c522aaac99f43b145923e6db6c0f, type: 3}
@@ -2368,7 +2318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "M\xFAsica"
+  m_text: Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2459,11 +2409,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationName: Music
   FallbackText: Music
---- !u!4 &2001354081 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 715103261, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-  m_PrefabInstance: {fileID: 678625527854258492}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2059306630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,37 +2785,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 715103260, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: saveLoad
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 715103260, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: currentLanguage
-      value: Portuguese
-      objectReference: {fileID: 0}
     - target: {fileID: 678625527131912904, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 678625527131912905, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: leanLocalization
-      value: 
-      objectReference: {fileID: 715103260}
     - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 452.57703
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 120.227615
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3211998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2899,6 +2832,26 @@ PrefabInstance:
     - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: entries.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: entries.Array.data[0].Text
+      value: shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: entries.Array.data[1].Text
+      value: atirar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: entries.Array.data[0].Language
+      value: English
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: entries.Array.data[1].Language
+      value: Portuguese
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c94bc6a650c7f438088c341743e682, type: 3}

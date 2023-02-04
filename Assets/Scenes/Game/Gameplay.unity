@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &59090861
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 678625527131912904, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 452.57703
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 120.227615
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.3211998
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
 --- !u!224 &71134810 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 528942232615095165, guid: 0cc2dc23bcf7e84439d39f2fb35a0612, type: 3}
@@ -1038,37 +1095,6 @@ Transform:
   m_Father: {fileID: 2093852700}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &612767817
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 612767818}
-  m_Layer: 6
-  m_Name: PositionBullet (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &612767818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612767817}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 52.4, y: 5.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 765098575}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &630471145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,11 +1512,6 @@ Transform:
   m_Father: {fileID: 2093852700}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 52.196}
---- !u!4 &765098575 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5050508120245042869, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
-  m_PrefabInstance: {fileID: 5570661668056615254}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &840770823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3199,6 +3220,7 @@ GameObject:
   - component: {fileID: 1862052034}
   - component: {fileID: 1862052036}
   - component: {fileID: 1862052035}
+  - component: {fileID: 1862052037}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3323,6 +3345,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862052033}
   m_CullTransparentMesh: 1
+--- !u!114 &1862052037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862052033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: atirar
+  FallbackText: Atirar
 --- !u!1 &1992402556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,6 +3553,7 @@ GameObject:
   - component: {fileID: 2105673431}
   - component: {fileID: 2105673433}
   - component: {fileID: 2105673432}
+  - component: {fileID: 2105673434}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3564,7 +3601,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=red>Atire para come\xE7ar</color>"
+  m_text: <color=red>shoot to start</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
   m_sharedMaterial: {fileID: 949865057681351409, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
@@ -3641,6 +3678,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105673430}
   m_CullTransparentMesh: 1
+--- !u!114 &2105673434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105673430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: iniciar
+  FallbackText: "<color=red>Atire para come\xE7ar</color>"
 --- !u!1001 &528942231935965099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4320,7 +4371,7 @@ MonoBehaviour:
   - {fileID: 2046540917}
   - {fileID: 448655205}
   enemyList: []
-  prefabEnemy: {fileID: 7414994079017097925, guid: 8561c46341acaed4d9486e3edeb1ee14, type: 3}
+  prefabEnemy: {fileID: 7414994079017097925, guid: 766679a1cd225044888fe023843fcd4c, type: 3}
   delaySpawn: 0.5
   numberEnemythisWave: 0400000008000000
 --- !u!1 &2959231099773664545
@@ -4366,7 +4417,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959231099773664545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff04076f44b37994da27e5dfc895273d, type: 3}
   m_Name: 
@@ -4375,7 +4426,8 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 7414994079017097925, guid: 8561c46341acaed4d9486e3edeb1ee14, type: 3}
     cost: 1
   currWave: 0
-  enemiesToSpawn: []
+  enemiesToSpawn:
+  - {fileID: 0}
   spawnLocation:
   - {fileID: 2959231099216543200}
   - {fileID: 2959231099089695647}
