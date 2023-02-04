@@ -526,7 +526,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: 0
-  entries: []
+  entries:
+  - Language: English
+    Text: Shoot
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Atirar
+    Object: {fileID: 0}
 --- !u!1 &5499396449005264362
 GameObject:
   m_ObjectHideFlags: 0

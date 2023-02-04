@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 715103260, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: saveLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 715103260, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: currentLanguage
+      value: Portuguese
+      objectReference: {fileID: 0}
+    - target: {fileID: 715103260, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
+      propertyPath: defaultLanguage
+      value: Portuguese
+      objectReference: {fileID: 0}
     - target: {fileID: 678625527131912904, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -562,7 +574,7 @@ MonoBehaviour:
   xpBarCurrent: 0
   lifeBar: {fileID: 1234827346}
   <CurrentHealth>k__BackingField: 0
-  <MaxHealth>k__BackingField: 2
+  <MaxHealth>k__BackingField: 50
 --- !u!114 &236371109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3601,7 +3613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <color=red>shoot to start</color>
+  m_text: "<color=red>Atire para come\xE7ar</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
   m_sharedMaterial: {fileID: 949865057681351409, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
@@ -4350,7 +4362,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959231099773664545}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7d8410ce0f06c541a48d7fbe4015aa5, type: 3}
   m_Name: 
@@ -4371,7 +4383,7 @@ MonoBehaviour:
   - {fileID: 2046540917}
   - {fileID: 448655205}
   enemyList: []
-  prefabEnemy: {fileID: 7414994079017097925, guid: 766679a1cd225044888fe023843fcd4c, type: 3}
+  prefabEnemy: {fileID: 7414994079017097925, guid: 84524c6b5fdd61f44a3eb5617f476f32, type: 3}
   delaySpawn: 0.5
   numberEnemythisWave: 0400000008000000
 --- !u!1 &2959231099773664545

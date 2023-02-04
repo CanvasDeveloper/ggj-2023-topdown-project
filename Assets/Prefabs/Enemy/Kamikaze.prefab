@@ -110,37 +110,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &3992387642345421142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1988513908230796325}
-  m_Layer: 7
-  m_Name: ShootPoistion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1988513908230796325
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3992387642345421142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0.34, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 814216647132228445}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7414994079017097925
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,13 +123,11 @@ GameObject:
   - component: {fileID: 821557452559606478}
   - component: {fileID: 438764860835956569}
   - component: {fileID: -3842274827073763623}
-  - component: {fileID: 1080761526}
   - component: {fileID: 244517973441457761}
   - component: {fileID: -7560129514360115382}
-  - component: {fileID: 745383877117459648}
-  - component: {fileID: 2076330934305999366}
+  - component: {fileID: 6583042841305708464}
   m_Layer: 7
-  m_Name: EnemyTiro
+  m_Name: Kamikaze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +146,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 823494325206718428}
-  - {fileID: 1988513908230796325}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -225,7 +191,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 07103c52b3aaeca4da8a83361edd059f, type: 3}
-  m_Color: {r: 0.43610525, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.6792453, g: 0.11213954, b: 0.13411959, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -288,24 +254,6 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 3
   destroyOnDie: 1
   enemyXp: 1
---- !u!114 &1080761526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414994079017097925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41a18e1bf974f342befc6635ee03983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  distanceToTree: 40
-  treeMother: {fileID: 0}
-  isLookingLeft: 1
-  damage: 1
-  timeToAttack: 0.5
 --- !u!114 &244517973441457761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923fd1a6fa8d6b2408611b571766ca61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &745383877117459648
+--- !u!114 &6583042841305708464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,34 +290,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7414994079017097925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 702f3436afedbd943ba88b98c5a03d7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 22d60504109c5ae45b84a77791d7d552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouchPlayer: 0
-  _iaVision: {fileID: 2076330934305999366}
-  hitInfo: []
-  lastPlayerPosition: {fileID: 0}
-  prefabBullet: {fileID: 7414994079017097925, guid: 8f8c8764269f6bf4084f0280c56e20d2, type: 3}
-  shotSpeed: 6.5
-  shotPosition: {fileID: 1988513908230796325}
-  delayAttack: 2.3
-  directionBullet: 0
-  isAttack: 0
-  isLookLeft: 0
---- !u!114 &2076330934305999366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414994079017097925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 778e7d6a0eec8a544a76577951fe0bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visionRange: 179
-  hitMask:
-    serializedVersion: 2
-    m_Bits: 64
-  hitBox: {fileID: 823494325206718428}
+  speed: 20
+  distanceToTree: 30
+  treeMother: {fileID: 0}
+  isLookingLeft: 1
+  damage: 5
