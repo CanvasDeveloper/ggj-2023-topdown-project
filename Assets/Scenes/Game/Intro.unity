@@ -392,63 +392,6 @@ Transform:
   m_Father: {fileID: 2093852700}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 23.653}
---- !u!1001 &147979796
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 71314865006630945, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_Name
-      value: Gameplay Music
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672715091604160058, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9016d4cafa669354a8e826ce70b7fb7d, type: 3}
 --- !u!1001 &151868817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].mesDuration
-      value: 2.5
+      value: 2.33
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].mesDuration
@@ -534,7 +477,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].DialogueLine
-      value: "parasitas de outro universo come\xE7ou\natacar o planeta..."
+      value: 'parasitas de outro universo
+
+        atacaram o planeta...'
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].DialogueLine
@@ -550,11 +495,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[0].mesDuration
-      value: 2.5
+      value: 2.33
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[0].DialogueLine
-      value: "\rparasites from another universe began\r\nattack the planet..."
+      value: "\rparasites from another universe\nattacked the planet..."
       objectReference: {fileID: 0}
     - target: {fileID: 3740586270690907963, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1731,11 +1676,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].mesDuration
-      value: 2.5
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].mesDuration
-      value: 2.5
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[2].mesDuration
@@ -1743,13 +1688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].DialogueLine
-      value: 'muitos morreram..
-
-        (tela preta para evitar tristesa)'
+      value: muitos morreram..
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].DialogueLine
-      value: "restou o \xFAltimo sobrevivente..."
+      value: "mas restou um \xFAltimo sobrevivente..."
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[2].DialogueLine
@@ -1761,21 +1704,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[0].mesDuration
-      value: 2.5
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[1].mesDuration
-      value: 2.5
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[0].DialogueLine
-      value: 'many died..
-
-        (black screen to avoid sadness)'
+      value: many died..
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[1].DialogueLine
-      value: "the last survivor left\r..."
+      value: "but a last survivor remained\r..."
       objectReference: {fileID: 0}
     - target: {fileID: 3740586270690907963, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3783,6 +3724,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1461661660
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 949817071876467638, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_Name
+      value: Intro Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907301458888086686, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19bc7d68452c43846b9dbc033d2d0769, type: 3}
 --- !u!1 &1465413627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,12 +3857,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: FadeDuration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: _dialogueBox
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: ButtonHandled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: TransitionTime
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: MessageDuration
@@ -3896,23 +3902,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].mesDuration
-      value: 2.5
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].mesDuration
-      value: 2.5
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[2].mesDuration
-      value: 1.5
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].DialogueLine
-      value: "onde existe a grande arvore\nonde todos os seres est\xE3o conectados"
+      value: "onde existe a Grande \xC1rvore,\nonde todos os seres est\xE3o conectados"
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].DialogueLine
-      value: "grande arvore possui um magia enorme\npara conseguir manter o planeta\t"
+      value: "a Grande \xC1rvore possui uma magia poderosa\nque mant\xE9m a vida
+        no planeta\t"
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[2].DialogueLine
@@ -3924,29 +3931,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[0].mesDuration
-      value: 2.5
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[1].mesDuration
-      value: 2.5
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[2].mesDuration
-      value: 1.5
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[0].DialogueLine
-      value: "\rwhere there is a big tree\r\nwhere all beings are connected"
+      value: "\rwhere there is the Big Tree\r,\nwhere all beings are connected"
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[1].DialogueLine
-      value: 'big tree has a huge magic
+      value: 'the Big Tree holds a powerful magic
 
-        to keep the planet'
+        that maintains life on
+        the planet'
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[2].DialogueLine
-      value: "\rBut something bad happened..."
+      value: but something bad happened...
       objectReference: {fileID: 0}
     - target: {fileID: 3740586270690907963, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5799,12 +5807,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: FadeDuration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: _dialogueBox
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: ButtonHandled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
+      propertyPath: TransitionTime
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: MessageDuration
@@ -5840,15 +5856,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[0].mesDuration
-      value: 1.5
+      value: 2.57
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[1].mesDuration
-      value: 2
+      value: 2.93
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[2].mesDuration
-      value: 3
+      value: 4.57
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[3].mesDuration
@@ -5864,24 +5880,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[2].DialogueLine
-      value: "onde vivem v\xE1rias especias de raiz\ncomo Batata, beterrabas,cenoura
+      value: "onde vivem v\xE1rias esp\xE9cies de raizes\ncomo batatas, beterrabas,cenouras
         \nentre outras..."
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: Dialogue.Array.data[3].DialogueLine
-      value: um local passifico...
+      value: "um local pac\xEDfico..."
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[0].mesDuration
-      value: 1.5
+      value: 2.57
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[1].mesDuration
-      value: 2
+      value: 2.93
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[2].mesDuration
-      value: 3
+      value: 4.57
       objectReference: {fileID: 0}
     - target: {fileID: 1233063663433924632, guid: 46ea931d057ad244e84e2187b88f9ff6, type: 3}
       propertyPath: DialogueEnglish.Array.data[3].mesDuration
@@ -5903,7 +5919,7 @@ PrefabInstance:
       propertyPath: DialogueEnglish.Array.data[2].DialogueLine
       value: 'where several root species live
 
-        such as Potatoes, beets, carrots
+        such as potatoes, beets, carrots
 
         among
         others...'
