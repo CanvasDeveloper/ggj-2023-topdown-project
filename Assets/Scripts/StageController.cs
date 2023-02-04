@@ -23,59 +23,74 @@ public class StageController : MonoBehaviour
 
     [SerializeField] private int currentWave = 0;
 
+    private int remainingEnemies;
+
     private void OnEnable()
     {
         //StartCoroutine("IE_Began");
-        StartCoroutine(IE_StartWave());
+        //StartCoroutine(IE_StartWave());
+        StartNewWave();
     }
 
-    private IEnumerator IE_StartWave()
+    /// <summary>
+    /// Check the max wave, add +1 to current wave, start a new wave.
+    /// </summary>
+    /// 
+    [ContextMenu("Start wave")]
+    private void StartNewWave()
+    {
+        currentWave++;
+
+        if (currentWave <= waveCount)
+            StartCoroutine(IE_WaitTimeForStartWave());
+    }
+
+    private IEnumerator IE_WaitTimeForStartWave()
+    {
+        yield return new WaitForSeconds(5);
+        StartCoroutine(IE_Wave());
+    }
+
+    private IEnumerator IE_Wave()
     {
         yield return new WaitForSeconds(1);
-        int totalEnemies = (int)(initialEnemies * (1 + Math.Log(currentWave + 1) * progressionRate));
+        int totalEnemies = (int)(initialEnemies * (1 + currentWave * progressionRate)); //(int)(initialEnemies * (1 + Math.Log(currentWave + 1) * progressionRate));
+        remainingEnemies = 0;
+        int lastIDspawn = -1;
+
         Debug.Log($"Total Enemies: {totalEnemies}");
 
-        int lastIDspawn = -1;
         for (int i = 0; i < totalEnemies; i++)
         {
+            //get a random spawnpoint
             int IDspawn;
             do
             {
                 IDspawn = UnityEngine.Random.Range(0, spawnPonts.Count);
-            } while (IDspawn == lastIDspawn);
+            } while
+            (IDspawn == lastIDspawn);
             lastIDspawn = IDspawn;
 
             var objEnemy = ObjectPooler.Instance.SpawnFromPool("EnemyPerto", spawnPonts[IDspawn].position, Quaternion.identity);
             var enemy = objEnemy.GetComponent<IDamageable>();
-            enemy.OnDie += () => 
-            {
-                enemyList.Remove(enemy);     
-            };
+
+            remainingEnemies++;
+
+            enemy.OnDie += OnEnemyDie;
+
             yield return new WaitForSeconds(delaySpawn / (currentWave + 1));
-        }
-
-        int remainingEnemies = 0;
-        foreach (var enemy in enemyList.Values)
-        {
-            if (enemy != null)
-            {
-                remainingEnemies++;
-            }
-        }
-
-        if (remainingEnemies == 0)
-        {
-            currentWave++;
-            if (currentWave < waveCount)
-            {
-                yield return new WaitForSeconds(5);
-                StartCoroutine(IE_StartWave());
-            }
-        }
-        else
-        {
-            StartCoroutine(IE_StartWave());
         }
     }
 
+    private void OnEnemyDie(IDamageable instance)
+    {
+        instance.OnDie -= OnEnemyDie;
+        enemyList.Remove(instance);
+
+        remainingEnemies--;
+        Debug.Log(remainingEnemies);
+
+        if (remainingEnemies <= 0)
+            StartNewWave();
+    }
 }
