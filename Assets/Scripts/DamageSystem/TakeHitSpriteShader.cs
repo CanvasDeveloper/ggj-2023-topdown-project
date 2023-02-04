@@ -18,6 +18,8 @@ public class TakeHitSpriteShader : MonoBehaviour
 
     private void OnEnable()
     {
+        sRenderer.material.DisableKeyword("HITEFFECT_ON");
+
         damageable.OnTakeDamage += HitEffect;
     }
 
