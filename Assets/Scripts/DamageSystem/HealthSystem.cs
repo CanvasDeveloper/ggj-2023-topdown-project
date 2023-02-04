@@ -21,8 +21,12 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        CurrentHealth = MaxHealth;
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
+    }
+
+    private void OnEnable()
+    {
+        CurrentHealth = MaxHealth;
     }
 
     /// <summary>
