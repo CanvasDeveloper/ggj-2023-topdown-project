@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 3322540285322369064}
   m_Layer: 6
   m_Name: MaskContactArea
-  m_TagString: Untagged
+  m_TagString: MaskContactCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
