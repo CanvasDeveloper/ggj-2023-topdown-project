@@ -26,9 +26,12 @@ public class TreeController : Singleton<TreeController>, IDamageable
     [field: SerializeField] public float MaxHealth { get; set; }
     public bool IsDie { get; set; }
 
+
+
+
     private void Start()
     {
-
+        
         if (xpBar != null)
         {
             CurrentHealth = MaxHealth;
@@ -36,16 +39,19 @@ public class TreeController : Singleton<TreeController>, IDamageable
         }
        
     }
-
+ 
     private void OnEnable()
     {
+      
         OnChangeHealth += SetlifeBar;
     }
 
     private void OnDisable()
     {
+       
         OnChangeHealth -= SetlifeBar;
     }
+
 
     public void SetAddXp(int xp)
     {
@@ -95,4 +101,6 @@ public class TreeController : Singleton<TreeController>, IDamageable
         OnDie?.Invoke();
         GameManager.Instance.GameOver();
     }
+
+  
 }

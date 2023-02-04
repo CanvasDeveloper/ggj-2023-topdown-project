@@ -154,14 +154,14 @@ GameObject:
   - component: {fileID: 821557452559606478}
   - component: {fileID: 438764860835956569}
   - component: {fileID: -3842274827073763623}
-  - component: {fileID: 1080761526}
   - component: {fileID: 244517973441457761}
   - component: {fileID: -7560129514360115382}
   - component: {fileID: 745383877117459648}
   - component: {fileID: 2076330934305999366}
+  - component: {fileID: 1199048107268531894}
   m_Layer: 7
   m_Name: EnemyTiro
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,24 +288,6 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 3
   destroyOnDie: 1
   enemyXp: 1
---- !u!114 &1080761526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414994079017097925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41a18e1bf974f342befc6635ee03983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  distanceToTree: 40
-  treeMother: {fileID: 0}
-  isLookingLeft: 1
-  damage: 1
-  timeToAttack: 0.5
 --- !u!114 &244517973441457761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,8 +331,8 @@ MonoBehaviour:
   _iaVision: {fileID: 2076330934305999366}
   hitInfo: []
   lastPlayerPosition: {fileID: 0}
-  prefabBullet: {fileID: 7414994079017097925, guid: 8f8c8764269f6bf4084f0280c56e20d2, type: 3}
-  shotSpeed: 6.5
+  prefabBullet: {fileID: 7414994079017097925, guid: 842c5ec898dbfda4fb9e24df8b52aa3d, type: 3}
+  shotSpeed: 6500
   shotPosition: {fileID: 1988513908230796325}
   delayAttack: 2.3
   directionBullet: 0
@@ -373,3 +355,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   hitBox: {fileID: 823494325206718428}
+--- !u!114 &1199048107268531894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414994079017097925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278d0bbea62b40146ab7a760a4252ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  distanceToTree: 100
+  treeMother: {fileID: 0}
+  isLookingLeft: 1

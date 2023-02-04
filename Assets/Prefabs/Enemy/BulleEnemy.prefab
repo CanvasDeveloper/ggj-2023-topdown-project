@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 823494325206718428}
   - component: {fileID: 4515770903231515080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2300541127566516360}
-  m_LocalRotation: {x: -0, y: -0, z: 0.0031067955, w: 0.9999952}
-  m_LocalPosition: {x: -0.63, y: -0.14, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,10 +49,10 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.212
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 000000005f0610b95d75614dbd9bb17c01f2a39b
+  m_ApplyToSortingLayers: 000000005f0610b9bd9bb17c
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 13.82
-  m_PointLightOuterRadius: 33.548374
+  m_PointLightOuterRadius: 22.82
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -120,15 +120,14 @@ GameObject:
   m_Component:
   - component: {fileID: 814216647132228445}
   - component: {fileID: 6553717813164155977}
+  - component: {fileID: 1953103395066846229}
   - component: {fileID: 821557452559606478}
-  - component: {fileID: 438764860835956569}
-  - component: {fileID: -3842274827073763623}
-  - component: {fileID: 244517973441457761}
-  - component: {fileID: -7560129514360115382}
-  - component: {fileID: 6583042841305708464}
-  m_Layer: 7
-  m_Name: Kamikaze
-  m_TagString: Enemy
+  - component: {fileID: -5801006373571797914}
+  - component: {fileID: 6430566547861473546}
+  - component: {fileID: 5159984577144476036}
+  m_Layer: 9
+  m_Name: BulleEnemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +141,7 @@ Transform:
   m_GameObject: {fileID: 7414994079017097925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalScale: {x: 30.000002, y: 30.000002, z: 30.000002}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 823494325206718428}
@@ -169,7 +168,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cebc1eafec8461c4aa0fcff32e74b1ee, type: 2}
+  - {fileID: 2100000, guid: 2e4513696e4360f48878156d91bebfe5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,11 +186,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1298232669
-  m_SortingLayer: 2
+  m_SortingLayerID: 2092014525
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07103c52b3aaeca4da8a83361edd059f, type: 3}
-  m_Color: {r: 0.6792453, g: 0.11213954, b: 0.13411959, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2ce00036fd39d404383f73c0766d4458, type: 3}
+  m_Color: {r: 0.35169482, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -201,6 +200,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1953103395066846229
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414994079017097925}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.26
 --- !u!50 &821557452559606478
 Rigidbody2D:
   serializedVersion: 4
@@ -222,23 +237,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &438764860835956569
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414994079017097925}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.49264166, y: -0.12648849}
-  m_Size: {x: 2.011794, y: 4.4483714}
-  m_Direction: 0
---- !u!114 &-3842274827073763623
+--- !u!114 &-5801006373571797914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,14 +246,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 7414994079017097925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b465a1e73d400a6448064fb16177bf3c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CurrentHealth>k__BackingField: 0
-  <MaxHealth>k__BackingField: 3
-  destroyOnDie: 1
-  enemyXp: 1
---- !u!114 &244517973441457761
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1094462177
+      Data2: 1165211352
+      Data3: 174304682
+      Data4: -417799533
+    Path: event:/SFX/Shoot
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &6430566547861473546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,13 +276,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7414994079017097925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6d443f0e36c2cd4da0b7487435cb833, type: 3}
+  m_Script: {fileID: 11500000, guid: af7b2f718ec8eac438576b9263cd85dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sRenderer: {fileID: 6553717813164155977}
-  speed: 4
-  glow: 2
---- !u!114 &-7560129514360115382
+  lifeTime: 4
+--- !u!114 &5159984577144476036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,23 +289,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7414994079017097925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 923fd1a6fa8d6b2408611b571766ca61, type: 3}
+  m_Script: {fileID: 11500000, guid: 145b7887ca8e93e46a5cfeeb1ef88e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6583042841305708464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414994079017097925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22d60504109c5ae45b84a77791d7d552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  distanceToTree: 30
-  treeMother: {fileID: 0}
-  isLookingLeft: 1
-  damage: 5
+  type: 1
+  damage: 1
+  heal: 0
+  destroyOnCollide: 1
+  spawnEffectPrefab: {fileID: 0}
