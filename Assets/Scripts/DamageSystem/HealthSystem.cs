@@ -52,8 +52,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
         IsDie = true;
         TreeController.Instance.SetAddXp(enemyXp);
 
-        if(destroyOnDie) //evita que o player seja destruido
-            Destroy(this.gameObject);
+        if (destroyOnDie) //evita que o player seja destruido
+            gameObject.SetActive(false);
     }
 
     /// <summary>

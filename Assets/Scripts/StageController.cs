@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using System;
 
 public class StageController : MonoBehaviour
 {
@@ -20,9 +21,36 @@ public class StageController : MonoBehaviour
     private int indexWave;
      private int numberEnemythisWavecurrent;
 
+    [HorizontalLine(1, EColor.Green)]
+    [Header("Config Wave")]
+    public int waveCount = 10;
+    public int initialEnemies = 10;
+    public float progressionRate = 0.1f;
+
+    [SerializeField] private int currentWave = 0;
+
     private void OnEnable()
     {
-        StartCoroutine("IE_Began");
+        //StartCoroutine("IE_Began");
+        StartCoroutine(IE_StartWave());
+    }
+
+    private IEnumerator IE_StartWave()
+    {
+        yield return new WaitForSeconds(1);
+        int totalEnemies = (int)(initialEnemies * (1 + Math.Log(currentWave + 1) * progressionRate));
+        Debug.Log($"Total Enemies: {totalEnemies}");
+        for (int i = 0; i < totalEnemies; i++)
+        {
+            int IDspawn= UnityEngine.Random.Range(0, spawnPonts.Count);
+            ObjectPooler.Instance.SpawnFromPool("EnemyPerto", spawnPonts[IDspawn].position, Quaternion.identity);
+        }
+        currentWave++;
+        if(currentWave < waveCount)
+        {
+            yield return new WaitForSeconds(5);
+            StartCoroutine(IE_StartWave());
+        }
     }
 
     private IEnumerator IE_Began()
@@ -37,7 +65,7 @@ public class StageController : MonoBehaviour
         {
             numberEnemythisWavecurrent++;
 
-            int temp = Random.Range(0, 9);
+            int temp = UnityEngine.Random.Range(0, 9);
             if (enemyList.Count > 0)
             {
                 enemyList[0].transform.position = spawnPonts[temp].position;
