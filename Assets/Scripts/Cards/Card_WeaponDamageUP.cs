@@ -47,7 +47,7 @@ public class Card_WeaponDamageUP : MonoBehaviour
 
     public void SetActiveBulletPosition()
     {
-        if(PowerUpController.Instance.m_player.bulletPoisiton[PowerUpController.Instance.m_player.bulletPoisiton.Length].gameObject.activeSelf == true)
+        if(PowerUpController.Instance.m_player.bulletPoisiton[PowerUpController.Instance.m_player.bulletPoisiton.Length-1].gameObject.activeSelf == true)
         {
             GameManager.Instance.Wave();
             return;
