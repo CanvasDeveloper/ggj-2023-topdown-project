@@ -61,12 +61,12 @@ public class GameplayCanvas : MonoBehaviour
         GameManager.Instance.PauseResume();
     }
 
-    private void TryAgain()
+    public void TryAgain()
     {
         SceneLoader.Instance.ReloadScene();
     }
 
-    private void QuitToMenu()
+    public void QuitToMenu()
     {
         SceneLoader.Instance.LoadTitle();
     }
