@@ -853,7 +853,7 @@ MonoBehaviour:
   - {fileID: 6297421974188941752}
   - {fileID: 6297421975228649902}
   - {fileID: 6297421974678815422}
-  spawnPointsKamikaze:
+  spawnPointsTiro:
   - {fileID: 1921082913614301496}
   - {fileID: 4877100194275849677}
   - {fileID: 4556196916745614403}
@@ -947,6 +947,7 @@ MonoBehaviour:
   - {fileID: 7905112717597350914, guid: 4df8b9c864e70bd4085bbd7a5aa0ae46, type: 3}
   - {fileID: 7905112717597350914, guid: 79c06454fc7782e4792e34562acea5f4, type: 3}
   - {fileID: 7905112717597350914, guid: 598cb1d4bcd849647a60ab7a27ae177b, type: 3}
+  patronoCards: []
   m_start: {fileID: 9112368547187233009}
 --- !u!114 &9112368547187233009
 MonoBehaviour:
