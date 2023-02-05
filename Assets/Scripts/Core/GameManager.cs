@@ -7,6 +7,7 @@ public class GameManager : Singleton<GameManager>
     public event Action OnDead;
     public event Action OnPowerUP;
     public event Action Next;
+    public event Action OnGameWin;
     public bool Paused { get; private set; }
 
     private bool isPowerUp;
@@ -71,5 +72,11 @@ public class GameManager : Singleton<GameManager>
             ResumeGame();
         else
             PauseGame();
+    }
+
+    public void GameWin()
+    {
+        Time.timeScale = 0;
+        OnGameWin?.Invoke();
     }
 }

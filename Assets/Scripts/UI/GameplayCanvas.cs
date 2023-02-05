@@ -8,6 +8,7 @@ public class GameplayCanvas : MonoBehaviour
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private GameObject hudIngame;
     [SerializeField] private GameObject hudPowerUP;
+    [SerializeField] private GameObject hudWin;
     [SerializeField] private Button backgroundButton;
     [SerializeField] private Button tryAgainButton;
     [SerializeField] private Button quitToMenuButton;
@@ -32,6 +33,7 @@ public class GameplayCanvas : MonoBehaviour
         GameManager.Instance.OnDead += OpenDeathScreen;
         GameManager.Instance.OnPowerUP += PowerUpUI;
         GameManager.Instance.Next += NextWave;
+        GameManager.Instance.OnGameWin += OpenGameWin;
     }
 
     private void OnDestroy()
@@ -40,6 +42,13 @@ public class GameplayCanvas : MonoBehaviour
         GameManager.Instance.OnDead -= OpenDeathScreen;
         GameManager.Instance.OnPowerUP -= PowerUpUI;
         GameManager.Instance.Next -= NextWave;
+        GameManager.Instance.OnGameWin -= OpenGameWin;
+    }
+
+    private void OpenGameWin()
+    {
+        DisableAll();
+        hudWin.SetActive(true);
     }
 
     private void HandlePauseUIButton()
