@@ -7,6 +7,8 @@ using System;
 public class StageController : MonoBehaviour
 {
     [SerializeField] List<Transform> spawnPonts = new List<Transform>();
+    [SerializeField] List<Transform> spawnPontTiro = new List<Transform>();
+
 
     [SerializeField] Dictionary<IDamageable, GameObject> enemyList = new Dictionary<IDamageable, GameObject>();
 
