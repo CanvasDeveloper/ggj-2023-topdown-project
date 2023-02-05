@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c241838c-ab69-4026-b334-d359c7d40e1d}">
+		<property name="assetPath">
+			<value>Footsteps Basic 12.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9dd548a9-033f-446f-beed-0c658dec676c}</destination>
+		</relationship>
+	</object>
+</objects>

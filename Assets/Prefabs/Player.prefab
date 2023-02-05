@@ -1994,6 +1994,7 @@ GameObject:
   - component: {fileID: 2036646353}
   - component: {fileID: 2036646354}
   - component: {fileID: 1167927723}
+  - component: {fileID: 836354876479722200}
   m_Layer: 6
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -2224,6 +2225,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &836354876479722200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6445072636327540838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55224b89dbb026848b682f8e438bd0aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7931005684088094273
 GameObject:
   m_ObjectHideFlags: 0
