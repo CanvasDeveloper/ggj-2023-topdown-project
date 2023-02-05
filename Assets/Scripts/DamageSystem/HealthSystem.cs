@@ -54,16 +54,26 @@ public class HealthSystem : MonoBehaviour, IDamageable
         OnTakeDamage?.Invoke();
     }
 
+
+
     public void Die()
     {
+        if (IsDie)
+            return;
         OnDie?.Invoke(this);
         IsDie = true;
         TreeController.Instance.SetAddXp(enemyXp);
 
+
         if (destroyOnDie)
         {
         }//evita que o player seja destruido
-            //gameObject.SetActive(false);
+         //gameObject.SetActive(false);
+
+        if (this.gameObject.name == "EnemyPerto(Clone)")
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cogumelo/Cogumelo Explosion", GetComponent<Transform>().position);
+        }
     }
 
     public void SetDieAnimation()
