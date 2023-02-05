@@ -49,7 +49,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 000000005d75614d5f0610b9
@@ -1742,6 +1742,7 @@ MonoBehaviour:
   directionBullet: 0
   isAttack: 0
   isLookLeft: 0
+  enemy: 0
 --- !u!95 &1212226793
 Animator:
   serializedVersion: 4
@@ -1859,6 +1860,9 @@ MonoBehaviour:
   isLookingLeft: 1
   player: {fileID: 1167927723}
   gun: {fileID: 1167927722}
+  isStunned: 0
+  stunnedTime: 1
+  stunForce: 15
 --- !u!114 &5570661667942078374
 MonoBehaviour:
   m_ObjectHideFlags: 0
