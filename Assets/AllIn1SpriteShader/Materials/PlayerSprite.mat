@@ -12,6 +12,7 @@ Material:
   m_ValidKeywords:
   - GLOW_ON
   - GRADIENT2COL_ON
+  - HITEFFECT_ON
   - OUTBASE_ON
   m_InvalidKeywords:
   - _GLOWAFFECTLIGHT_ON
