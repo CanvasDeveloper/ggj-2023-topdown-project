@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 244517973441457761}
   - component: {fileID: -7560129514360115382}
   - component: {fileID: 3492937461151228627}
+  - component: {fileID: 1720708254}
   m_Layer: 7
   m_Name: EnemyPerto
   m_TagString: Enemy
@@ -143,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 7414994079017097925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 823494325206718428}
@@ -192,8 +193,8 @@ SpriteRenderer:
   m_SortingLayerID: 1298232669
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07103c52b3aaeca4da8a83361edd059f, type: 3}
-  m_Color: {r: 1, g: 0.7466493, b: 0, a: 1}
+  m_Sprite: {fileID: -475511467, guid: 983b807f099877646922d11abfb661a8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -314,6 +315,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maskObject: {fileID: 750943461}
+--- !u!95 &1720708254
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414994079017097925}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f032fb7e5edcf4048b1dede990b98c3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2137685268649994298
 PrefabInstance:
   m_ObjectHideFlags: 0

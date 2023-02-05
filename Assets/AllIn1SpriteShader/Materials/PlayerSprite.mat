@@ -131,7 +131,7 @@ Material:
     - _GlitchSize: 1
     - _Glow: 0.3
     - _GlowAffectLight: 1
-    - _GlowGlobal: 1.2
+    - _GlowGlobal: 1
     - _GradBlend: 0
     - _GradBoostX: 1.88
     - _GradBoostY: 0.82
@@ -175,7 +175,7 @@ Material:
     - _OffsetUvY: 0
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
-    - _OutlineAlpha: 1
+    - _OutlineAlpha: 0.908
     - _OutlineDistortAmount: 0.5
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
@@ -183,7 +183,7 @@ Material:
     - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 10
     - _OutlineTexYSpeed: 0
-    - _OutlineWidth: 0.008
+    - _OutlineWidth: 0.006
     - _OverlayBlend: 1
     - _OverlayGlow: 1
     - _PinchUvAmount: 0
