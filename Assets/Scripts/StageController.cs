@@ -6,9 +6,8 @@ using System;
 
 public class StageController : MonoBehaviour
 {
-    [SerializeField] List<Transform> spawnPonts = new List<Transform>();
-    [SerializeField] List<Transform> spawnPontTiro = new List<Transform>();
-
+    [SerializeField] List<Transform> spawnPoints = new List<Transform>();
+    [SerializeField] List<Transform> spawnPointsKamikaze = new List<Transform>();
 
     [SerializeField] Dictionary<IDamageable, GameObject> enemyList = new Dictionary<IDamageable, GameObject>();
 
@@ -22,8 +21,8 @@ public class StageController : MonoBehaviour
     public int waveCount = 10;
     public int initialEnemies = 10;
     public float progressionRate = 0.1f;
-
     [SerializeField] private int currentWave = 0;
+    public List<ConfigEnemyWave> configEnemyWaves;
 
     private int remainingEnemies;
 
@@ -68,12 +67,24 @@ public class StageController : MonoBehaviour
             int IDspawn;
             do
             {
-                IDspawn = UnityEngine.Random.Range(0, spawnPonts.Count);
+                IDspawn = UnityEngine.Random.Range(0, spawnPoints.Count);
             } while
             (IDspawn == lastIDspawn);
             lastIDspawn = IDspawn;
 
-            var objEnemy = ObjectPooler.Instance.SpawnFromPool("EnemyPerto", spawnPonts[IDspawn].position, Quaternion.identity);
+            List<string> tagsEnemy = new List<string>();
+            foreach (var w in configEnemyWaves)
+            {
+                if (currentWave >= w.setEnemyOnWave)
+                    tagsEnemy.Add(w.tagEnemy);
+            }
+            int id = UnityEngine.Random.Range(0, tagsEnemy.Count);
+            GameObject objEnemy = null;
+            if (tagsEnemy.Contains("Kamizaze"))
+                objEnemy = ObjectPooler.Instance.SpawnFromPool(tagsEnemy[id], spawnPoints[IDspawn].position, Quaternion.identity);
+            else
+                objEnemy = ObjectPooler.Instance.SpawnFromPool(tagsEnemy[id], spawnPointsKamikaze[IDspawn].position, Quaternion.identity);
+
             var enemy = objEnemy.GetComponent<IDamageable>();
 
             remainingEnemies++;
@@ -95,4 +106,11 @@ public class StageController : MonoBehaviour
         if (remainingEnemies <= 0)
             StartNewWave();
     }
+}
+
+[System.Serializable]
+public class ConfigEnemyWave
+{
+    public string tagEnemy;
+    public int setEnemyOnWave;
 }

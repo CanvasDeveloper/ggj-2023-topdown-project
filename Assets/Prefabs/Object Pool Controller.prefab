@@ -44,7 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f003180a8cf2d6a4485fbbff6b013e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroy: 0
   pools:
   - tag: EnemyPerto
     prefab: {fileID: 7414994079017097925, guid: 8561c46341acaed4d9486e3edeb1ee14, type: 3}
+    size: 20
+  - tag: EnemyTiro
+    prefab: {fileID: 7414994079017097925, guid: 766679a1cd225044888fe023843fcd4c, type: 3}
+    size: 20
+  - tag: Kamikaze
+    prefab: {fileID: 7414994079017097925, guid: 84524c6b5fdd61f44a3eb5617f476f32, type: 3}
     size: 20
