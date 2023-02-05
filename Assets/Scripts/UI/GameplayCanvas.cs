@@ -34,26 +34,12 @@ public class GameplayCanvas : MonoBehaviour
         GameManager.Instance.Next += NextWave;
     }
 
-    private void OnEnable()
-    {
-        //TODO: Aqui estah soh por teste como "PlayerController", precisamos da arvore pro player receber dano
-        playerHealthSystem = FindObjectOfType<PlayerController>().gameObject.GetComponent<IDamageable>();
-
-        //Registrando os eventos
-        playerHealthSystem.OnChangeHealth += UpdateHealthBar;
-        playerHealthSystem.OnDie += OpenDeathScreen;
-    }
-
-    private void OnDisable()
-    {
-        //removendo os eventos
-        playerHealthSystem.OnChangeHealth -= UpdateHealthBar;
-        playerHealthSystem.OnDie -= OpenDeathScreen;
-    }
-
     private void OnDestroy()
     {
         GameManager.Instance.OnPauseStatusChange -= HandlePauseUI;
+        GameManager.Instance.OnDead -= OpenDeathScreen;
+        GameManager.Instance.OnPowerUP -= PowerUpUI;
+        GameManager.Instance.Next -= NextWave;
     }
 
     private void HandlePauseUIButton()
