@@ -127,7 +127,7 @@ Material:
     - _GhostTransparency: 0
     - _GlitchAmount: 3
     - _GlitchSize: 1
-    - _Glow: 10
+    - _Glow: 0.2
     - _GlowAffectLight: 1
     - _GlowGlobal: 1
     - _GradBlend: 1
@@ -145,7 +145,7 @@ Material:
     - _HandDrawnAmount: 10
     - _HandDrawnSpeed: 5
     - _HitEffectBlend: 1
-    - _HitEffectGlow: 5
+    - _HitEffectGlow: 1.2
     - _HologramBlend: 1
     - _HologramMaxAlpha: 0.75
     - _HologramMinAlpha: 0.1
