@@ -238,8 +238,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.49264166, y: -0.12648849}
-  m_Size: {x: 2.011794, y: 4.4483714}
+  m_Offset: {x: 0.99819756, y: -15.894342}
+  m_Size: {x: 44.625103, y: 51.074978}
   m_Direction: 0
 --- !u!114 &-3842274827073763623
 MonoBehaviour:
@@ -288,6 +288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sRenderer: {fileID: 6553717813164155977}
+  hitGlowColor: {r: 1, g: 1, b: 1, a: 1}
+  healGlowColor: {r: 1, g: 1, b: 1, a: 1}
   speed: 4
   glow: 2
 --- !u!114 &-7560129514360115382

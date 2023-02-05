@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ObjectPooler : Singleton<ObjectPooler>
 {
     public List<Pool> pools;
     private Dictionary<string, Queue<GameObject>> poolDictionary;
-
 
     private void Start()
     {
@@ -34,14 +34,40 @@ public class ObjectPooler : Singleton<ObjectPooler>
             return null;
         }
 
-        GameObject objToSpawn = poolDictionary[tag].Dequeue();
+        Queue<GameObject> objectPool = poolDictionary[tag];
+        GameObject objToSpawn = null;
+
+        if (objectPool.Count > 0)
+        {
+            objToSpawn = objectPool.Dequeue();
+            while (objToSpawn.activeSelf == true)
+            {
+                objToSpawn = objectPool.Dequeue();
+                if (objectPool.Count == 0)
+                {
+                    objToSpawn = Instantiate(pools.Find(x => x.tag == tag).prefab);
+                    objToSpawn.SetActive(false);
+                    objectPool.Enqueue(objToSpawn);
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            objToSpawn = Instantiate(poolDictionary[tag].Peek().gameObject);
+            objToSpawn.SetActive(false);
+            objectPool.Enqueue(objToSpawn);
+        }
 
         objToSpawn.transform.position = position;
         objToSpawn.transform.rotation = rotation;
         objToSpawn.SetActive(true);
 
-        poolDictionary[tag].Enqueue(objToSpawn);
-
+        objectPool.Enqueue(objToSpawn);
+        Debug.Log("count dic: " + objectPool.Count);
         return objToSpawn;
     }
 }

@@ -14,6 +14,8 @@ public class EnemyMoviment : MonoBehaviour
 
     [SerializeField] private float damage = 1;
     [SerializeField] private float timeToAttack = 0.5f;
+
+    private Animator anim;
    
 
     private bool canHit = true;
@@ -21,6 +23,7 @@ public class EnemyMoviment : MonoBehaviour
     private void OnEnable()
     {
         treeMother = TreeController.Instance.transform;
+        anim = GetComponent<Animator>();
       
     }
     private void Update()
@@ -32,6 +35,7 @@ public class EnemyMoviment : MonoBehaviour
             //perto da arvore
             if (canHit)
             {
+                anim.SetTrigger("attack");
                 TreeController.Instance.TakeDamage(damage);
                 canHit = false;
                 StartCoroutine(WaitForHit());

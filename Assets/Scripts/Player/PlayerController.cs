@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Bullets")]
     //Para fins de teste
-    [SerializeField] private GameObject bulletPrefab;
+    public GameObject bulletPrefab;
     public Transform[] bulletPoisiton;
     [SerializeField] private Transform gunPivot;
 
@@ -52,6 +52,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
 
     private IDamageable health;
+
+    public Animator player;
+    public Animator gun;
 
     private void Awake()
     {
@@ -90,24 +93,25 @@ public class PlayerController : MonoBehaviour
         {
             if (!isCanShoot)
                 return;
-            for(int i=0; i < bulletPoisiton.Length; i++)
-            {
-                if (bulletPoisiton[i].gameObject.activeSelf == true)
-                {
-                    GameObject temp = Instantiate(bulletPrefab, bulletPoisiton[i].position, bulletPoisiton[i].rotation);
-                }
-               
-
-            }
+           
 
             Debug.Log("apertou mouse");
             StartCoroutine(IE_CanShoot());
+            gun.SetTrigger("attack");
         }
     }
-
+    
     private void FixedUpdate()
     {
         _rigidbody2D.velocity = _inputReference.Movement * moveSpeed;
+        if(_rigidbody2D.velocity !=  new Vector2(0,0))
+        {
+            player.SetBool("isWalk", true);
+        }
+        else
+        {
+            player.SetBool("isWalk", false);
+        } 
     }
 
     /// <summary>
