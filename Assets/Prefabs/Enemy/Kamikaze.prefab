@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d60504109c5ae45b84a77791d7d552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 30
   distanceToTree: 30
   treeMother: {fileID: 0}
   isLookingLeft: 1
