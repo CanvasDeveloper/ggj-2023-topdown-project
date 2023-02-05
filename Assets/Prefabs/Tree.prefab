@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e945ffdf4a4e3241bda5e9053e471cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroy: 0
   xpBar: {fileID: 0}
   xpBarMax: 10
   xpBarCurrent: 0
