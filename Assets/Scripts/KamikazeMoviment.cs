@@ -13,11 +13,15 @@ public class KamikazeMoviment : MonoBehaviour
     [SerializeField] private bool isLookingLeft;
 
     [SerializeField] private float damage = 1;
- 
 
+    Animator anim;
 
     private bool canHit = true;
 
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     private void OnEnable()
     {
         treeMother = TreeController.Instance.transform;
@@ -32,8 +36,10 @@ public class KamikazeMoviment : MonoBehaviour
             //perto da arvore
             if (canHit)
             {
-                TreeController.Instance.TakeDamage(damage);
-                Destroy(gameObject);
+                
+                anim.SetBool("isDie", true);
+              
+                //Destroy(gameObject);
                
             }
 
@@ -41,6 +47,11 @@ public class KamikazeMoviment : MonoBehaviour
         }
 
         transform.position = Vector3.MoveTowards(transform.position, treeMother.position, speed * Time.deltaTime);
+    }
+
+    public void Damage()
+    {
+        TreeController.Instance.TakeDamage(damage);
     }
 
    
