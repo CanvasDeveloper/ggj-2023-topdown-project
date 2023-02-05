@@ -42,7 +42,7 @@ public class TakeHitSpriteShader : MonoBehaviour
 
     private IEnumerator Hit(Color activeGlowColor)
     {
-        sRenderer.material.SetColor("_GlowColor", activeGlowColor);
+        sRenderer.material.SetColor("_HitEffectColor", activeGlowColor);
         sRenderer.material.EnableKeyword("HITEFFECT_ON");
 
         sRenderer.material.SetFloat("_HitEffectGlow", glow);
