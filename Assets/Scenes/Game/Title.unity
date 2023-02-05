@@ -413,7 +413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: change language
+  m_text: "mudar idioma\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
   m_sharedMaterial: {fileID: 949865057681351409, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
@@ -1123,9 +1123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sound
-
-'
+  m_text: Som
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2220,7 +2218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  translationName: Quit To Desktop
+  translationName: Quit
   FallbackText: Quit To Desktop
 --- !u!1 &1912325435
 GameObject:
@@ -2318,7 +2316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Music
+  m_text: "M\xFAsica"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2832,26 +2830,6 @@ PrefabInstance:
     - target: {fileID: 678625527131912906, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: entries.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: entries.Array.data[0].Text
-      value: shoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: entries.Array.data[1].Text
-      value: atirar
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: entries.Array.data[0].Language
-      value: English
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660771623436201274, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
-      propertyPath: entries.Array.data[1].Language
-      value: Portuguese
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c94bc6a650c7f438088c341743e682, type: 3}
