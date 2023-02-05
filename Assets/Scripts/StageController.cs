@@ -79,8 +79,10 @@ public class StageController : MonoBehaviour
                     tagsEnemy.Add(w.tagEnemy);
             }
             int id = UnityEngine.Random.Range(0, tagsEnemy.Count);
+
             GameObject objEnemy = null;
-            if (tagsEnemy.Contains("Tiro") == false)
+
+            if (tagsEnemy[id].Contains("Tiro") == false)
                 objEnemy = ObjectPooler.Instance.SpawnFromPool(tagsEnemy[id], spawnPoints[IDspawn].position, Quaternion.identity);
             else
                 objEnemy = ObjectPooler.Instance.SpawnFromPool(tagsEnemy[id], spawnPointsTiro[IDspawn].position, Quaternion.identity);
