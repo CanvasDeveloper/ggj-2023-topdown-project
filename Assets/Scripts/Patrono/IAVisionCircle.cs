@@ -3,7 +3,7 @@
 public class IAVisionCircle : MonoBehaviour
 {
   
-    [Range(15f, 200.0f)]
+    //[Range(15f, 200.0f)]
     public float visionRange ;
 
     [Header("RaycastHit")]
