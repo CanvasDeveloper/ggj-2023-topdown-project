@@ -28,6 +28,7 @@ public class CenouritaController : MonoBehaviour
 
     private Vector2 direction;
     public bool isLookLeft = true;
+    public bool enemy;
 
     private Animator anim;
 
@@ -87,18 +88,20 @@ public class CenouritaController : MonoBehaviour
                 }
                
 
-                //Movimentação do torço 
-                if (isLookLeft)
+                if(!enemy)
                 {
-                    transform.rotation = LookAtTarget(transform.position - lastPlayerPosition.position);
+                    //Movimentação do torço 
+                    if (isLookLeft)
+                    {
+                        transform.rotation = LookAtTarget(transform.position - lastPlayerPosition.position);
+
+                    }
+                    else
+                    {
+                        transform.rotation = LookAtTarget(lastPlayerPosition.position - transform.position);
+                    }
 
                 }
-                else
-                {
-                   transform.rotation = LookAtTarget(lastPlayerPosition.position - transform.position);
-                }
-
-
             }
 
         }

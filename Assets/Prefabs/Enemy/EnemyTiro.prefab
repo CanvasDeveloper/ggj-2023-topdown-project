@@ -271,9 +271,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.49264166, y: -0.12648849}
-  m_Size: {x: 2.011794, y: 4.4483714}
-  m_Direction: 0
+  m_Offset: {x: -4.803277, y: -4.8289423}
+  m_Size: {x: 75.372574, y: 70.27824}
+  m_Direction: 1
 --- !u!114 &-3842274827073763623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +343,7 @@ MonoBehaviour:
   directionBullet: 0
   isAttack: 0
   isLookLeft: 0
+  enemy: 1
 --- !u!114 &2076330934305999366
 MonoBehaviour:
   m_ObjectHideFlags: 0
