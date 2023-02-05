@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class TakeHitSpriteShader : MonoBehaviour
 {
-    private IDamageable damageable;
-    [SerializeField] private SpriteRenderer sRenderer;
+    protected IDamageable damageable;
+    [SerializeField] protected SpriteRenderer sRenderer;
 
-    [SerializeField] private float speed = 4;
-    [SerializeField] private float glow = 2;
+    [SerializeField] protected Color hitGlowColor = Color.white;
+    [SerializeField] protected Color healGlowColor = Color.white;
+    [SerializeField] protected float speed = 4;
+    [SerializeField] protected float glow = 2;
 
     private void Awake()
     {
@@ -19,27 +21,34 @@ public class TakeHitSpriteShader : MonoBehaviour
     private void OnEnable()
     {
         damageable.OnTakeDamage += HitEffect;
+        damageable.OnHeal += HealEffect;
     }
 
     private void OnDisable()
     {
         damageable.OnTakeDamage -= HitEffect;
+        damageable.OnHeal -= HealEffect;
     }
 
-    [ContextMenu("Test Take Hit Effect")]
     private void HitEffect()
     {
-        StartCoroutine(Hit());
+        StartCoroutine(Hit(hitGlowColor));
     }
 
-    private IEnumerator Hit()
+    private void HealEffect()
     {
+        StartCoroutine(Hit(healGlowColor));
+    }
+
+    private IEnumerator Hit(Color activeGlowColor)
+    {
+        sRenderer.material.SetColor("_HitEffectColor", activeGlowColor);
         sRenderer.material.EnableKeyword("HITEFFECT_ON");
 
         sRenderer.material.SetFloat("_HitEffectGlow", glow);
         sRenderer.material.SetFloat("_HitEffectBlend", 0);
 
-        while(sRenderer.material.GetFloat("_HitEffectBlend") < 0.9f)
+        while (sRenderer.material.GetFloat("_HitEffectBlend") < 0.9f)
         {
             var amount = Mathf.Lerp(sRenderer.material.GetFloat("_HitEffectBlend"), 1, speed * Time.deltaTime);
             sRenderer.material.SetFloat("_HitEffectBlend", amount);

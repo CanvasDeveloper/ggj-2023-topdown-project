@@ -3982,14 +3982,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
-    - target: {fileID: 2309766620082219583, guid: bc4bf3c264994ed4abca3f5ddb0bffb1, type: 3}
-      propertyPath: xpBar
-      value: 
-      objectReference: {fileID: 4209433268088719515}
-    - target: {fileID: 2309766620082219583, guid: bc4bf3c264994ed4abca3f5ddb0bffb1, type: 3}
-      propertyPath: lifeBar
-      value: 
-      objectReference: {fileID: 1234827346}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc4bf3c264994ed4abca3f5ddb0bffb1, type: 3}
 --- !u!66 &2728023976735942498
@@ -4209,7 +4201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959231099773664545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7d8410ce0f06c541a48d7fbe4015aa5, type: 3}
   m_Name: 
@@ -4280,7 +4272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959231099773664545}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff04076f44b37994da27e5dfc895273d, type: 3}
   m_Name: 
@@ -4548,10 +4540,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5570661667942078397, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570661667942078397, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7734975341945550304, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
