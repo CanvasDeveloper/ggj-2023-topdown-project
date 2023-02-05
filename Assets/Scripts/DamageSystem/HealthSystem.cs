@@ -74,6 +74,10 @@ public class HealthSystem : MonoBehaviour, IDamageable
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Cogumelo/Cogumelo Explosion", GetComponent<Transform>().position);
         }
+        if (this.gameObject.name == "Kamikaze(Clone)")
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Kamikaze/Kamikaze Explosion", GetComponent<Transform>().position);
+        }
     }
 
     public void SetDieAnimation()
