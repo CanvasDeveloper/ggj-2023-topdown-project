@@ -190,7 +190,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 33192756f398f824babb41f920c340b3, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656c20f22a3546c4187685739e6bfd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroy: 1
   fadeCanvas: {fileID: 6224911031480137896}
   animator: {fileID: 6224911031705051913}
   animationFadeTime: 0.5
