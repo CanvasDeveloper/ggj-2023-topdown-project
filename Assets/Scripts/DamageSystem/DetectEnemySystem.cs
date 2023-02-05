@@ -32,19 +32,19 @@ public class DetectEnemySystem : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                TreeController.Instance.TakeDamage(damage);
+                TreeController.Instance.TakeDamage(transform.position, damage);
                 if (collision.gameObject.TryGetComponent(out IDamageable damageable) && collision.gameObject.CompareTag("Player"))
                 {
-                    damageable.TakeDamage(damage);
+                    damageable.TakeDamage(transform.position, damage);
                     
                 }
 
                 break;
             case "Tree":
-                  TreeController.Instance.TakeDamage(damage);
+                  TreeController.Instance.TakeDamage(transform.position, damage);
                 if (collision.gameObject.TryGetComponent(out IDamageable damageable1) && collision.gameObject.CompareTag("Tree"))
                 {
-                    damageable1.TakeDamage(damage);
+                    damageable1.TakeDamage(transform.position, damage);
                    
                 }
 
@@ -62,19 +62,19 @@ public class DetectEnemySystem : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                TreeController.Instance.TakeDamage(damage);
+                TreeController.Instance.TakeDamage(transform.position, damage);
                 if (collision.gameObject.TryGetComponent(out IDamageable damageable) && collision.gameObject.CompareTag("Player"))
                 {
-                    damageable.TakeDamage(damage);
+                    damageable.TakeDamage(transform.position, damage);
 
                 }
 
                 break;
             case "Tree":
-                TreeController.Instance.TakeDamage(damage);
+                TreeController.Instance.TakeDamage(transform.position, damage);
                 if (collision.gameObject.TryGetComponent(out IDamageable damageable1) && collision.gameObject.CompareTag("Tree"))
                 {
-                    damageable1.TakeDamage(damage);
+                    damageable1.TakeDamage(transform.position, damage);
 
                 }
 

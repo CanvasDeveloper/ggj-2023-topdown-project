@@ -11,10 +11,10 @@ public interface IDamageable
     public bool IsDie { get; set; }
 
     public event Action<float, float> OnChangeHealth; //current / max usado somente para UI
-    public event Action OnTakeDamage; //usado para parar o player e VFX
+    public event Action<Vector3> OnTakeDamage; //usado para parar o player e VFX
     public event Action OnHeal; //usado para VFX
     public event Action<IDamageable> OnDie; //usado para parar o player
-    public void TakeDamage(float damage); //pra tomar dano
+    public void TakeDamage(Vector3 direction, float damage); //pra tomar dano
     public void Heal(float amount); //pra curar
     public void Die();
 }

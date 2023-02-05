@@ -36,7 +36,7 @@ public class EnemyMoviment : MonoBehaviour
             if (canHit)
             {
                 anim.SetTrigger("attack");
-                TreeController.Instance.TakeDamage(damage);
+                TreeController.Instance.TakeDamage(transform.position, damage);
                 canHit = false;
                 StartCoroutine(WaitForHit());
             }

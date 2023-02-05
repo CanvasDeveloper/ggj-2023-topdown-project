@@ -56,6 +56,10 @@ public class PlayerController : MonoBehaviour
     public Animator player;
     public Animator gun;
 
+    [SerializeField] private bool isStunned;
+    [SerializeField] private float stunnedTime = 1;
+    [SerializeField] private float stunForce = 15;
+
     private void Awake()
     {
         _inputReference = GetComponent<InputReference>();
@@ -67,6 +71,25 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         main = Camera.main;
+
+        health.OnTakeDamage += Stun;
+    }
+
+    private void Stun(Vector3 direction)
+    {
+        isStunned = true;
+
+        var dir = transform.position - direction;
+
+        _rigidbody2D.AddForce(dir.normalized * stunForce);
+
+        StartCoroutine(IE_Stun());
+    }
+
+    private IEnumerator IE_Stun()
+    {
+        yield return new WaitForSeconds(stunnedTime);
+
     }
 
     private void Update()
@@ -82,6 +105,9 @@ public class PlayerController : MonoBehaviour
         }
 
         if (GameManager.Instance && GameManager.Instance.Paused)
+            return;
+
+        if (isStunned)
             return;
 
         mouseWorldPosition = main.ScreenToWorldPoint(_inputReference.MousePosition);
@@ -103,6 +129,9 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if (isStunned || health.IsDie)
+            return;
+
         _rigidbody2D.velocity = _inputReference.Movement * moveSpeed;
         if(_rigidbody2D.velocity !=  new Vector2(0,0))
         {

@@ -32,7 +32,7 @@ public class TakeHitSpriteShader : MonoBehaviour
         damageable.OnHeal -= HealEffect;
     }
 
-    private void HitEffect()
+    private void HitEffect(Vector3 position)
     {
         StartCoroutine(Hit(hitGlowColor));
     }

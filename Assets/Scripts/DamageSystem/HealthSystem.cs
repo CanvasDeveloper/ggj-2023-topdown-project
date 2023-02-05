@@ -12,7 +12,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public event Action<float, float> OnChangeHealth;
     //avisa que o gameObject foi morto
     public event Action<IDamageable> OnDie;
-    public event Action OnTakeDamage;
+    public event Action<Vector3> OnTakeDamage;
     public event Action OnHeal;
 
     [SerializeField] private bool destroyOnDie;
@@ -39,7 +39,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     /// Tomar dano
     /// </summary>
     /// <param name="damage">dano</param>
-    public void TakeDamage(float damage)
+    public void TakeDamage(Vector3 direction, float damage)
     {
         if (damage <= 0)
             return;
@@ -54,7 +54,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         }
 
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
-        OnTakeDamage?.Invoke();
+        OnTakeDamage?.Invoke(direction);
     }
 
 

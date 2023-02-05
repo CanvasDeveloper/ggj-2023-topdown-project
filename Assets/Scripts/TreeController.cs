@@ -18,7 +18,7 @@ public class TreeController : Singleton<TreeController>, IDamageable
     [SerializeField] private Image lifeBar;
 
     public event Action<float, float> OnChangeHealth;
-    public event Action OnTakeDamage;
+    public event Action<Vector3> OnTakeDamage;
     public event Action OnHeal;
     public event Action<IDamageable> OnDie;
 
@@ -71,7 +71,7 @@ public class TreeController : Singleton<TreeController>, IDamageable
         lifeBar.fillAmount = currrentHealth / maxHealth;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(Vector3 direction, float damage)
     {
         CurrentHealth -= damage;
         if (CurrentHealth < 0)
@@ -80,7 +80,7 @@ public class TreeController : Singleton<TreeController>, IDamageable
             return;
         }
 
-        OnTakeDamage?.Invoke();
+        OnTakeDamage?.Invoke(direction);
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
     }
 

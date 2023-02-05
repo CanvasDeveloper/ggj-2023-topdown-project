@@ -52,7 +52,7 @@ public class KamikazeMoviment : MonoBehaviour
     public void Damage()
     {
         if(!canHit)
-        TreeController.Instance.TakeDamage(damage);
+        TreeController.Instance.TakeDamage(transform.position, damage);
     }
 
    
