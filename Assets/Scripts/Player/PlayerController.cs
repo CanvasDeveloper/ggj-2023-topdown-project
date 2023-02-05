@@ -72,12 +72,17 @@ public class PlayerController : MonoBehaviour
     {
         main = Camera.main;
 
-        health.OnTakeDamage += Stun;
+        //health.OnTakeDamage += Stun;
+    }
+
+    private void OnDestroy()
+    {
+        //health.OnTakeDamage -= Stun;
     }
 
     private void Stun(Vector3 direction)
     {
-        isStunned = true;
+        //isStunned = true;
 
         var dir = transform.position - direction;
 
