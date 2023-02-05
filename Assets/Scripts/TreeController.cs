@@ -84,6 +84,14 @@ public class TreeController : Singleton<TreeController>, IDamageable
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
     }
 
+    public void AddMaxHP(float value)
+    {
+        MaxHealth += value;
+        CurrentHealth = MaxHealth;
+        OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
+        OnHeal?.Invoke();
+    }
+
     public void Heal(float amount)
     {
 
