@@ -29,10 +29,12 @@ public class CenouritaController : MonoBehaviour
     private Vector2 direction;
     public bool isLookLeft = true;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-       
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -120,7 +122,8 @@ public class CenouritaController : MonoBehaviour
         {
             isAttack = true;
             StartCoroutine(DelayAttack());
-            shotAttacking();
+            anim.SetTrigger("Attack");
+           // shotAttacking();
         }
 
 
@@ -160,6 +163,7 @@ public class CenouritaController : MonoBehaviour
         yield return new WaitForSeconds(delayAttack);
         isDelay = false;
         isAttack = false;
+        isTouchPlayer = false;
 
     }
 }
