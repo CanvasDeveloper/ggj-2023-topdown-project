@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 125847501934691053}
   - component: {fileID: 125847501934691055}
   - component: {fileID: 125847501934691052}
+  - component: {fileID: 1687206309575826756}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -261,7 +262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cura da arvore
+  m_text: MAXHP Arvore
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
   m_sharedMaterial: {fileID: 949865057681351409, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
@@ -288,7 +289,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.35
+  m_fontSize: 38.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -330,6 +331,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1687206309575826756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125847501934691058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: MAXHP Arvore
+  FallbackText: MAXHP Arvore
 --- !u!1 &125847502367683437
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +356,7 @@ GameObject:
   - component: {fileID: 125847502367683436}
   - component: {fileID: 125847502367683438}
   - component: {fileID: 125847502367683439}
+  - component: {fileID: 3177784275227352581}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -465,6 +481,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3177784275227352581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125847502367683437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: aumenta o total de vida da arvore em 40
+  FallbackText: aumenta o total de vida da arvore em 40
 --- !u!1 &7905112717597350914
 GameObject:
   m_ObjectHideFlags: 0

@@ -127,7 +127,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 40
+          m_IntArgument: 100
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 125847501934691053}
   - component: {fileID: 125847501934691055}
   - component: {fileID: 125847501934691052}
+  - component: {fileID: 1281745934266473853}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -343,6 +344,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1281745934266473853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125847501934691058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: big max tree
+  FallbackText: big max tree
 --- !u!1 &125847502367683437
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +369,7 @@ GameObject:
   - component: {fileID: 125847502367683436}
   - component: {fileID: 125847502367683438}
   - component: {fileID: 125847502367683439}
+  - component: {fileID: 1818788534805568937}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -478,6 +494,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1818788534805568937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125847502367683437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: cura a arvore em  100 pontos
+  FallbackText: cura a arvore em  100 pontos
 --- !u!1 &7905112717597350914
 GameObject:
   m_ObjectHideFlags: 0

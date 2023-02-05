@@ -416,7 +416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "mudar idioma\r"
+  m_text: change language
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
   m_sharedMaterial: {fileID: 949865057681351409, guid: 15ddf4c462b36f4429721c32c12991a7, type: 2}
@@ -1183,7 +1183,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Som
+  m_text: 'Sound
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 647fbc5407286ab43bf7c032c0423b88, type: 2}
   m_sharedMaterial: {fileID: -2334733785988780920, guid: 647fbc5407286ab43bf7c032c0423b88, type: 2}
@@ -2702,7 +2704,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "M\xFAsica"
+  m_text: Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 647fbc5407286ab43bf7c032c0423b88, type: 2}
   m_sharedMaterial: {fileID: -2334733785988780920, guid: 647fbc5407286ab43bf7c032c0423b88, type: 2}
