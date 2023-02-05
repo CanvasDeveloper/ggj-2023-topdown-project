@@ -19,8 +19,11 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
     [SerializeField] private int enemyXp;
 
+    private Animator anim;
+
     private void Start()
     {
+        anim = GetComponent<Animator>();
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
     }
 
@@ -43,6 +46,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         if (CurrentHealth < 0)
         {
             Die();
+            anim.SetBool("isDie", true);
             return;
         }
 
@@ -56,9 +60,18 @@ public class HealthSystem : MonoBehaviour, IDamageable
         IsDie = true;
         TreeController.Instance.SetAddXp(enemyXp);
 
-        if (destroyOnDie) //evita que o player seja destruido
-            gameObject.SetActive(false);
+        if (destroyOnDie)
+        {
+        }//evita que o player seja destruido
+            //gameObject.SetActive(false);
     }
+
+    public void SetDieAnimation()
+    {
+        gameObject.SetActive(false);
+    }
+
+
 
     /// <summary>
     /// Para curar
