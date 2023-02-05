@@ -1909,6 +1909,7 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 10
   destroyOnDie: 0
   enemyXp: 0
+  collider2d: {fileID: 5570661668056615261}
 --- !u!114 &5570661667942078372
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ using System;
 public class StageController : MonoBehaviour
 {
     [SerializeField] List<Transform> spawnPoints = new List<Transform>();
-    [SerializeField] List<Transform> spawnPointsKamikaze = new List<Transform>();
+    [SerializeField] List<Transform> spawnPointsTiro = new List<Transform>();
 
     [SerializeField] Dictionary<IDamageable, GameObject> enemyList = new Dictionary<IDamageable, GameObject>();
 
@@ -80,10 +80,10 @@ public class StageController : MonoBehaviour
             }
             int id = UnityEngine.Random.Range(0, tagsEnemy.Count);
             GameObject objEnemy = null;
-            if (tagsEnemy.Contains("Kamizaze"))
+            if (tagsEnemy.Contains("Tiro") == false)
                 objEnemy = ObjectPooler.Instance.SpawnFromPool(tagsEnemy[id], spawnPoints[IDspawn].position, Quaternion.identity);
             else
-                objEnemy = ObjectPooler.Instance.SpawnFromPool(tagsEnemy[id], spawnPointsKamikaze[IDspawn].position, Quaternion.identity);
+                objEnemy = ObjectPooler.Instance.SpawnFromPool(tagsEnemy[id], spawnPointsTiro[IDspawn].position, Quaternion.identity);
 
             var enemy = objEnemy.GetComponent<IDamageable>();
 
@@ -102,7 +102,7 @@ public class StageController : MonoBehaviour
 
         remainingEnemies--;
         Debug.Log(remainingEnemies);
-
+        instance.IsDie = false;
         if (remainingEnemies <= 0)
             StartNewWave();
     }
