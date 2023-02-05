@@ -160,12 +160,13 @@ MonoBehaviour:
   - {fileID: -8287061714849582417}
   - {fileID: 1026675562261336308}
   - {fileID: 5292025794103649680}
+  - {fileID: 5385690521074717860}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1405623175960073639}
   StringsBanks:
   - {fileID: 3207245728547959031}
-  cacheTime: 638111549035170699
+  cacheTime: 638111597407383058
   cacheVersion: 131601
 --- !u!114 &1026675562261336308
 MonoBehaviour:
@@ -209,10 +210,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Resources/ggj-2023-topdown-project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638111549035147451
+  lastModified: 638111597407367006
   FileSizes:
   - Name: Desktop
-    Value: 665664
+    Value: 725888
   Exists: 1
 --- !u!114 &3207245728547959031
 MonoBehaviour:
@@ -229,10 +230,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Resources/ggj-2023-topdown-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638111549035170699
+  lastModified: 638111597407383058
   FileSizes:
   - Name: Desktop
-    Value: 1276
+    Value: 1334
   Exists: 1
 --- !u!114 &4377262998185273465
 MonoBehaviour:
@@ -288,6 +289,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &5385690521074717860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cogumelo/Cogumelo Explosion
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cogumelo/Cogumelo Explosion
+  Guid:
+    Data1: 159323
+    Data2: 1205236109
+    Data3: -1317059967
+    Data4: 1711661524
+  Banks:
+  - {fileID: 1405623175960073639}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1733
 --- !u!114 &6307441627798749285
 MonoBehaviour:
   m_ObjectHideFlags: 0
