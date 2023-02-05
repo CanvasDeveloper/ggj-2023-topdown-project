@@ -36,7 +36,7 @@ public class KamikazeMoviment : MonoBehaviour
             //perto da arvore
             if (canHit)
             {
-                
+                canHit = false;
                 anim.SetBool("isDie", true);
               
                 //Destroy(gameObject);
@@ -51,6 +51,7 @@ public class KamikazeMoviment : MonoBehaviour
 
     public void Damage()
     {
+        if(!canHit)
         TreeController.Instance.TakeDamage(damage);
     }
 
@@ -71,4 +72,7 @@ public class KamikazeMoviment : MonoBehaviour
         }
 
     }
+
+  
+
 }
