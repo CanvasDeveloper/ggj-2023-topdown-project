@@ -44,7 +44,7 @@ public class StageController : MonoBehaviour
 
         if (currentWave <= waveCount)
             StartCoroutine(IE_WaitTimeForStartWave());
-        else
+        else if(currentWave > waveCount)
             GameManager.Instance.GameWin();
     }
 
