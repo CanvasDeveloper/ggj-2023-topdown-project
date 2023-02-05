@@ -853,7 +853,7 @@ MonoBehaviour:
   - {fileID: 6297421974188941752}
   - {fileID: 6297421975228649902}
   - {fileID: 6297421974678815422}
-  spawnPontsKamikaze:
+  spawnPointsKamikaze:
   - {fileID: 1921082913614301496}
   - {fileID: 4877100194275849677}
   - {fileID: 4556196916745614403}
