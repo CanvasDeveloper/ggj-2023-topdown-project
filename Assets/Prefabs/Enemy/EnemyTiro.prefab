@@ -158,7 +158,6 @@ GameObject:
   - component: {fileID: -7560129514360115382}
   - component: {fileID: 745383877117459648}
   - component: {fileID: 2076330934305999366}
-  - component: {fileID: 1199048107268531894}
   - component: {fileID: 760881862215038237}
   - component: {fileID: 86534291}
   m_Layer: 7
@@ -356,27 +355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778e7d6a0eec8a544a76577951fe0bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 179
+  visionRange: 200
   hitMask:
     serializedVersion: 2
     m_Bits: 64
   hitBox: {fileID: 823494325206718428}
---- !u!114 &1199048107268531894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414994079017097925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 278d0bbea62b40146ab7a760a4252ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 12
-  distanceToTree: 100
-  treeMother: {fileID: 0}
-  isLookingLeft: 1
 --- !u!114 &760881862215038237
 MonoBehaviour:
   m_ObjectHideFlags: 0
