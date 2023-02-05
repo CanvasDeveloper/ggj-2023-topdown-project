@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2309766619142018727}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50, y: 14.9, z: 0}
   m_LocalScale: {x: 55.857403, y: 73.89857, z: 100}
   m_ConstrainProportionsScale: 1
@@ -165,7 +165,7 @@ MonoBehaviour:
   hitGlowColor: {r: 1, g: 0.2396226, b: 0.2396226, a: 1}
   healGlowColor: {r: 0.1666073, g: 0.754717, b: 0.22543295, a: 1}
   speed: 4
-  glow: 2
+  glow: 1.4
 --- !u!114 &5043277280306692246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   hitGlowColor: {r: 1, g: 0.24313726, b: 0.24313726, a: 1}
   healGlowColor: {r: 0.16470589, g: 0.7529412, b: 0.22352941, a: 1}
   speed: 4
-  glow: 2
+  glow: 1.4
 --- !u!1 &2309766619864385407
 GameObject:
   m_ObjectHideFlags: 0
