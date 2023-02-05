@@ -18,18 +18,21 @@ public class HealthSystem : MonoBehaviour, IDamageable
     [SerializeField] private bool destroyOnDie;
 
     [SerializeField] private int enemyXp;
+    public Collider2D collider2d;
 
     private Animator anim;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        collider2d = GetComponent<Collider2D>();
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
     }
 
     private void OnEnable()
     {
         CurrentHealth = MaxHealth;
+        collider2d.enabled = true;
     }
 
     /// <summary>
@@ -60,9 +63,10 @@ public class HealthSystem : MonoBehaviour, IDamageable
     {
         if (IsDie)
             return;
-        OnDie?.Invoke(this);
         IsDie = true;
+        collider2d.enabled = false;
         TreeController.Instance.SetAddXp(enemyXp);
+        OnDie?.Invoke(this);
 
 
         if (destroyOnDie)
