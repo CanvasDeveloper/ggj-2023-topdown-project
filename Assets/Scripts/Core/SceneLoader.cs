@@ -52,14 +52,16 @@ public class SceneLoader : Singleton<SceneLoader>
 
         animator.SetTrigger(FadeInParam);
 
-        yield return new WaitForSeconds(animationFadeTime);
+        yield return new WaitForSecondsRealtime(animationFadeTime);
 
+        GameManager.Instance.ResumeGame();
         var operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => operation.isDone);
         yield return new WaitForEndOfFrame();
 
+ 
         animator.SetTrigger(FadeOutParam);
 
         isLoadingScene = false;
