@@ -618,7 +618,7 @@ Transform:
   - {fileID: 1696002434}
   - {fileID: 236371106}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &488955876
 GameObject:
@@ -1106,7 +1106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5829730212514009400, guid: 4e47ee0e3b85bbf4da7c34582a73c084, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5829730212514009400, guid: 4e47ee0e3b85bbf4da7c34582a73c084, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1577,7 +1577,7 @@ Transform:
   - {fileID: 71134810}
   - {fileID: 117803730}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1234827346 stripped
 MonoBehaviour:
@@ -4402,7 +4402,7 @@ Transform:
   m_Children:
   - {fileID: 1928416318938318727}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1928416319136780101
 Animator:
@@ -4784,6 +4784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4669154998635690073, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5570661667942078395, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4926,6 +4930,26 @@ PrefabInstance:
       propertyPath: m_player
       value: 
       objectReference: {fileID: 5570661668056615261}
+    - target: {fileID: 9112368547187233010, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
+      propertyPath: patronoCards.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112368547187233010, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
+      propertyPath: patronoCards.Array.data[0]
+      value: 
+      objectReference: {fileID: 7905112717597350914, guid: e2644baa7f36f434b863e47c1d5acbc0, type: 3}
+    - target: {fileID: 9112368547187233010, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
+      propertyPath: patronoCards.Array.data[1]
+      value: 
+      objectReference: {fileID: 7905112717597350914, guid: 82701e6b1295d2d4499a64c049d249d4, type: 3}
+    - target: {fileID: 9112368547187233010, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
+      propertyPath: patronoCards.Array.data[2]
+      value: 
+      objectReference: {fileID: 7905112717597350914, guid: 074b9a3aef9e6ff429f87e27e7b66efb, type: 3}
+    - target: {fileID: 9112368547187233010, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
+      propertyPath: patronoCards.Array.data[3]
+      value: 
+      objectReference: {fileID: 7905112717597350914, guid: 074b9a3aef9e6ff429f87e27e7b66efb, type: 3}
     - target: {fileID: 9112368547187233018, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
       propertyPath: m_Name
       value: StageController
@@ -4944,7 +4968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9112368547187233020, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9112368547187233020, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4997,7 +5021,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2668553630077336872, guid: 349821879c5286c499c5033ce75dca9b, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2668553630077336872, guid: 349821879c5286c499c5033ce75dca9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5045,7 +5069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3634712927933061970, guid: 349821879c5286c499c5033ce75dca9b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 349821879c5286c499c5033ce75dca9b, type: 3}

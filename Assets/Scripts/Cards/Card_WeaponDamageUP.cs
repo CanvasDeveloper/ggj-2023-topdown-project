@@ -25,6 +25,14 @@ public class Card_WeaponDamageUP : MonoBehaviour
     {
         PowerUpController.Instance.m_player.patrono.SetActive(true);
         PowerUpController.Instance.cardList.Remove(PowerUpController.Instance.cardList[4]); //posição do card
+
+        foreach (GameObject go in PowerUpController.Instance.patronoCards)
+        {
+            PowerUpController.Instance.cardList.Add(go);
+
+        }
+
+
         GameManager.Instance.Wave();
   
     }
