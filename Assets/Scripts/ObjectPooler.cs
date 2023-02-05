@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ObjectPooler : Singleton<ObjectPooler>
 {
@@ -33,25 +34,40 @@ public class ObjectPooler : Singleton<ObjectPooler>
             return null;
         }
 
-        GameObject objToSpawn = poolDictionary[tag].Dequeue();
-        while (objToSpawn.activeSelf == true)
+        Queue<GameObject> objectPool = poolDictionary[tag];
+        GameObject objToSpawn = null;
+
+        if (objectPool.Count > 0)
         {
-            objToSpawn = poolDictionary[tag].Dequeue();
-            if (poolDictionary[tag].Count == 0)
+            objToSpawn = objectPool.Dequeue();
+            while (objToSpawn.activeSelf == true)
             {
-                objToSpawn = Instantiate(poolDictionary[tag].Peek().gameObject);
-                objToSpawn.SetActive(false);
-                poolDictionary[tag].Enqueue(objToSpawn);
-                break;
+                objToSpawn = objectPool.Dequeue();
+                if (objectPool.Count == 0)
+                {
+                    objToSpawn = Instantiate(pools.Find(x => x.tag == tag).prefab);
+                    objToSpawn.SetActive(false);
+                    objectPool.Enqueue(objToSpawn);
+                }
+                else
+                {
+                    break;
+                }
             }
+        }
+        else
+        {
+            objToSpawn = Instantiate(poolDictionary[tag].Peek().gameObject);
+            objToSpawn.SetActive(false);
+            objectPool.Enqueue(objToSpawn);
         }
 
         objToSpawn.transform.position = position;
         objToSpawn.transform.rotation = rotation;
         objToSpawn.SetActive(true);
 
-        poolDictionary[tag].Enqueue(objToSpawn);
-        Debug.Log("count dic: " + poolDictionary[tag].Count);
+        objectPool.Enqueue(objToSpawn);
+        Debug.Log("count dic: " + objectPool.Count);
         return objToSpawn;
     }
 }
