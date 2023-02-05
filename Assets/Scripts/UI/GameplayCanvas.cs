@@ -93,10 +93,15 @@ public class GameplayCanvas : MonoBehaviour
         var percent = current / max;
     }
 
+    private void OpenDeathScreen()
+    {
+        OpenDeathScreen(null);
+    }
+
     /// <summary>
     /// Abre o painel de morte
     /// </summary>
-    private void OpenDeathScreen()
+    private void OpenDeathScreen(IDamageable instance)
     {
         DisableAll();
         hudIngame.SetActive(false);

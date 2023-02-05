@@ -20,7 +20,7 @@ public class TreeController : Singleton<TreeController>, IDamageable
     public event Action<float, float> OnChangeHealth;
     public event Action OnTakeDamage;
     public event Action OnHeal;
-    public event Action OnDie;
+    public event Action<IDamageable> OnDie;
 
     [field: SerializeField] public float CurrentHealth { get; set; }
     [field: SerializeField] public float MaxHealth { get; set; }
@@ -106,7 +106,7 @@ public class TreeController : Singleton<TreeController>, IDamageable
     public void Die()
     {
         IsDie = true;
-        OnDie?.Invoke();
+        OnDie?.Invoke(this);
         GameManager.Instance.GameOver();
     }
 

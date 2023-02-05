@@ -11,7 +11,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     //diz que esse carinha alterou a vida (dano ou cura), e passa a vida atual
     public event Action<float, float> OnChangeHealth;
     //avisa que o gameObject foi morto
-    public event Action OnDie;
+    public event Action<IDamageable> OnDie;
     public event Action OnTakeDamage;
     public event Action OnHeal;
 
@@ -21,8 +21,12 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        CurrentHealth = MaxHealth;
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
+    }
+
+    private void OnEnable()
+    {
+        CurrentHealth = MaxHealth;
     }
 
     /// <summary>
@@ -48,7 +52,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
     public void Die()
     {
-        OnDie?.Invoke();
+        OnDie?.Invoke(this);
         IsDie = true;
         TreeController.Instance.SetAddXp(enemyXp);
 

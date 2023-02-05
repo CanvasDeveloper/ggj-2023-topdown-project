@@ -8,18 +8,12 @@ public class StageController : MonoBehaviour
 {
     [SerializeField] List<Transform> spawnPonts = new List<Transform>();
 
-    [SerializeField] List<GameObject> enemyList = new List<GameObject>();
+    [SerializeField] Dictionary<IDamageable, GameObject> enemyList = new Dictionary<IDamageable, GameObject>();
 
     [HorizontalLine(1, EColor.Green)]
 
     [SerializeField] GameObject prefabEnemy;
     [SerializeField] float delaySpawn;
-
-    [HorizontalLine(1, EColor.Green)]
-
-    [SerializeField] List<int> numberEnemythisWave = new List<int>();
-    private int indexWave;
-     private int numberEnemythisWavecurrent;
 
     [HorizontalLine(1, EColor.Green)]
     [Header("Config Wave")]
@@ -29,57 +23,74 @@ public class StageController : MonoBehaviour
 
     [SerializeField] private int currentWave = 0;
 
+    private int remainingEnemies;
+
     private void OnEnable()
     {
         //StartCoroutine("IE_Began");
-        StartCoroutine(IE_StartWave());
+        //StartCoroutine(IE_StartWave());
+        StartNewWave();
     }
 
-    private IEnumerator IE_StartWave()
+    /// <summary>
+    /// Check the max wave, add +1 to current wave, start a new wave.
+    /// </summary>
+    /// 
+    [ContextMenu("Start wave")]
+    private void StartNewWave()
+    {
+        currentWave++;
+
+        if (currentWave <= waveCount)
+            StartCoroutine(IE_WaitTimeForStartWave());
+    }
+
+    private IEnumerator IE_WaitTimeForStartWave()
+    {
+        yield return new WaitForSeconds(5);
+        StartCoroutine(IE_Wave());
+    }
+
+    private IEnumerator IE_Wave()
     {
         yield return new WaitForSeconds(1);
-        int totalEnemies = (int)(initialEnemies * (1 + Math.Log(currentWave + 1) * progressionRate));
+        int totalEnemies = (int)(initialEnemies * (1 + currentWave * progressionRate)); //(int)(initialEnemies * (1 + Math.Log(currentWave + 1) * progressionRate));
+        remainingEnemies = 0;
+        int lastIDspawn = -1;
+
         Debug.Log($"Total Enemies: {totalEnemies}");
+
         for (int i = 0; i < totalEnemies; i++)
         {
-            int IDspawn= UnityEngine.Random.Range(0, spawnPonts.Count);
-            ObjectPooler.Instance.SpawnFromPool("EnemyPerto", spawnPonts[IDspawn].position, Quaternion.identity);
-        }
-        currentWave++;
-        if(currentWave < waveCount)
-        {
-            yield return new WaitForSeconds(5);
-            StartCoroutine(IE_StartWave());
+            //get a random spawnpoint
+            int IDspawn;
+            do
+            {
+                IDspawn = UnityEngine.Random.Range(0, spawnPonts.Count);
+            } while
+            (IDspawn == lastIDspawn);
+            lastIDspawn = IDspawn;
+
+            var objEnemy = ObjectPooler.Instance.SpawnFromPool("EnemyPerto", spawnPonts[IDspawn].position, Quaternion.identity);
+            var enemy = objEnemy.GetComponent<IDamageable>();
+
+            remainingEnemies++;
+
+            enemy.OnDie += OnEnemyDie;
+
+            yield return new WaitForSeconds(delaySpawn / (currentWave + 1));
         }
     }
 
-    private IEnumerator IE_Began()
+    private void OnEnemyDie(IDamageable instance)
     {
-        yield return new WaitForSeconds(1f);
-        if(numberEnemythisWavecurrent >= numberEnemythisWave[indexWave])
-        {
-            StopCoroutine(IE_Began());
-           
-        }
-        else
-        {
-            numberEnemythisWavecurrent++;
+        instance.OnDie -= OnEnemyDie;
+        enemyList.Remove(instance);
 
-            int temp = UnityEngine.Random.Range(0, 9);
-            if (enemyList.Count > 0)
-            {
-                enemyList[0].transform.position = spawnPonts[temp].position;
-                enemyList[0].SetActive(true);
-                enemyList.Remove(enemyList[0]);
-            }
-            else
-            {
-                Instantiate(prefabEnemy, spawnPonts[temp].position, spawnPonts[temp].rotation);
-            }
-            yield return new WaitForSeconds(delaySpawn);
-            StartCoroutine(IE_Began());
-        }
-       
+        remainingEnemies--;
+        Debug.Log(remainingEnemies);
 
+        if (remainingEnemies <= 0)
+            StartNewWave();
     }
 }
