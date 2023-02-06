@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c8d100d3-e9f5-40b9-9b3a-5d72b66ea7bf}">
+		<property name="assetPath">
+			<value>Burp3.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.69999999999999996</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9dd548a9-033f-446f-beed-0c658dec676c}</destination>
+		</relationship>
+	</object>
+</objects>

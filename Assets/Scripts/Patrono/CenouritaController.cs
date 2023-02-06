@@ -144,6 +144,7 @@ public class CenouritaController : MonoBehaviour
         temp.transform.position = shotPosition.transform.position;
         // Aplica uma força na direção do inimigo
         temp.GetComponent<Rigidbody2D>().AddForce(direction.normalized * shotSpeed);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Planta Carnivora/Carnivora Shot", GetComponent<Transform>().position);
     }
 
     public void Flip()

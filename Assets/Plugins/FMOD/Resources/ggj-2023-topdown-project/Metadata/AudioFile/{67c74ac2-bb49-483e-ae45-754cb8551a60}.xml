@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{67c74ac2-bb49-483e-ae45-754cb8551a60}">
+		<property name="assetPath">
+			<value>Carnivora Shot 3.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.96666666666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9dd548a9-033f-446f-beed-0c658dec676c}</destination>
+		</relationship>
+	</object>
+</objects>

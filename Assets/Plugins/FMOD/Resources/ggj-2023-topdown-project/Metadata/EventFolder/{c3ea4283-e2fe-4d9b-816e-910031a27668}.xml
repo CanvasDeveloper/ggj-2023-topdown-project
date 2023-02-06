@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{c3ea4283-e2fe-4d9b-816e-910031a27668}">
+		<property name="name">
+			<value>Planta Carnivora</value>
+		</property>
+		<relationship name="folder">
+			<destination>{03713a58-9fe3-44ac-acbe-f7ef61f1ee63}</destination>
+		</relationship>
+	</object>
+</objects>

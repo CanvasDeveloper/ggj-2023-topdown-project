@@ -163,12 +163,13 @@ MonoBehaviour:
   - {fileID: 5385690521074717860}
   - {fileID: 4841130636204573488}
   - {fileID: 1026131816465065161}
+  - {fileID: 2166018663829103397}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1405623175960073639}
   StringsBanks:
   - {fileID: 3207245728547959031}
-  cacheTime: 638111858585754117
+  cacheTime: 638112477010885395
   cacheVersion: 131601
 --- !u!114 &1026131816465065161
 MonoBehaviour:
@@ -239,11 +240,38 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Resources/ggj-2023-topdown-project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638111858585674168
+  lastModified: 638112477010863784
   FileSizes:
   - Name: Desktop
-    Value: 1987744
+    Value: 2057184
   Exists: 1
+--- !u!114 &2166018663829103397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Planta Carnivora/Carnivora Shot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Planta Carnivora/Carnivora Shot
+  Guid:
+    Data1: -1813797415
+    Data2: 1337280603
+    Data3: 961021072
+    Data4: 411844965
+  Banks:
+  - {fileID: 1405623175960073639}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 966
 --- !u!114 &3207245728547959031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,10 +287,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Resources/ggj-2023-topdown-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638111858585754117
+  lastModified: 638112477010885395
   FileSizes:
   - Name: Desktop
-    Value: 1450
+    Value: 1512
   Exists: 1
 --- !u!114 &4377262998185273465
 MonoBehaviour:
