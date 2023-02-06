@@ -26,6 +26,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
     {
         anim = GetComponent<Animator>();
         collider2d = GetComponent<Collider2D>();
+        /*if (gameObject.CompareTag("Player"))
+            CurrentHealth = TreeController.Instance.CurrentHealth;*/
         OnChangeHealth?.Invoke(CurrentHealth, MaxHealth);
     }
 

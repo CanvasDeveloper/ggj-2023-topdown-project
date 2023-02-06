@@ -38,6 +38,12 @@ public class CenouritaController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void OnEnable()
+    {
+        isAttack = false;
+        isDelay = false;
+    }
+
     private void FixedUpdate()
     {
 

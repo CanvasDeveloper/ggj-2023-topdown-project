@@ -881,6 +881,8 @@ MonoBehaviour:
     setEnemyOnWave: 3
   - tagEnemy: Kamikaze
     setEnemyOnWave: 5
+  enemiesCurrentWave: []
+  interval: 10
 --- !u!114 &9112368547187233011
 MonoBehaviour:
   m_ObjectHideFlags: 0

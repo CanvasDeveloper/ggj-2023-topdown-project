@@ -3779,6 +3779,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 3555572760643313113, guid: bc4bf3c264994ed4abca3f5ddb0bffb1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206249233010371390, guid: bc4bf3c264994ed4abca3f5ddb0bffb1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc4bf3c264994ed4abca3f5ddb0bffb1, type: 3}
 --- !u!66 &2728023976735942498
@@ -4025,6 +4033,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5570661667942078374, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
+      propertyPath: <MaxHealth>k__BackingField
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5570661667942078395, guid: 83457f42d0f78b747b9baa5a8ebcc777, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4174,6 +4186,10 @@ PrefabInstance:
     - target: {fileID: 9112368547187233018, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
       propertyPath: m_Name
       value: StageController
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112368547187233019, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
+      propertyPath: progressionRate
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 9112368547187233020, guid: 19ba841ca8ad4fe4a8daa063b0e0a4d4, type: 3}
       propertyPath: m_RootOrder
