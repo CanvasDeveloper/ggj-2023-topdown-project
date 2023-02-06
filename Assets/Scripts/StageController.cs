@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using System;
+using TMPro;
 
 public class StageController : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class StageController : MonoBehaviour
     public float progressionRate = 0.1f;
     [SerializeField] private int currentWave = 0;
     public List<ConfigEnemyWave> configEnemyWaves;
+    public List<GameObject> enemiesCurrentWave;
+
+    public float interval = 10.0f; // o intervalo em segundos entre as verificações
+    private float elapsedTime = 0.0f; // tempo decorrido
+    private bool isWaitWave;
 
     private int remainingEnemies;
 
@@ -33,6 +39,27 @@ public class StageController : MonoBehaviour
         StartNewWave();
     }
 
+    private void Update()
+    {
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime >= interval)
+        {
+            int numberEnemies = 0;
+            for (int i = 0; i < enemiesCurrentWave.Count; i++)
+            {
+                if (enemiesCurrentWave[i].activeSelf)
+                {
+                    numberEnemies++;
+                }
+            }
+
+            if(numberEnemies == 0 && isWaitWave == false)
+                StartNewWave();
+
+            elapsedTime = 0.0f;
+        }
+    }
+
     /// <summary>
     /// Check the max wave, add +1 to current wave, start a new wave.
     /// </summary>
@@ -40,6 +67,7 @@ public class StageController : MonoBehaviour
     [ContextMenu("Start wave")]
     private void StartNewWave()
     {
+        enemiesCurrentWave.Clear();
         currentWave++;
 
         if (currentWave <= waveCount)
@@ -50,6 +78,7 @@ public class StageController : MonoBehaviour
 
     private IEnumerator IE_WaitTimeForStartWave()
     {
+        isWaitWave = true;
         yield return new WaitForSeconds(5);
         StartCoroutine(IE_Wave());
     }
@@ -57,6 +86,7 @@ public class StageController : MonoBehaviour
     private IEnumerator IE_Wave()
     {
         yield return new WaitForSeconds(1);
+        isWaitWave = false;
         int totalEnemies = (int)(initialEnemies * (1 + currentWave * progressionRate)); //(int)(initialEnemies * (1 + Math.Log(currentWave + 1) * progressionRate));
         remainingEnemies = 0;
         int lastIDspawn = -1;
@@ -89,6 +119,7 @@ public class StageController : MonoBehaviour
             else
                 objEnemy = ObjectPooler.Instance.SpawnFromPool(tagsEnemy[id], spawnPointsTiro[IDspawn].position, Quaternion.identity);
 
+            enemiesCurrentWave.Add(objEnemy);
             var enemy = objEnemy.GetComponent<IDamageable>();
 
             remainingEnemies++;
@@ -101,10 +132,10 @@ public class StageController : MonoBehaviour
 
     private void OnEnemyDie(IDamageable instance)
     {
+        remainingEnemies--;
         instance.OnDie -= OnEnemyDie;
         enemyList.Remove(instance);
 
-        remainingEnemies--;
         Debug.Log(remainingEnemies);
         instance.IsDie = false;
         if (remainingEnemies <= 0)
