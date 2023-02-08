@@ -256,10 +256,10 @@ RectTransform:
   - {fileID: 1987060644}
   - {fileID: 830008955}
   - {fileID: 2059306631}
+  - {fileID: 952887472}
   - {fileID: 537137358}
   - {fileID: 1742713000}
   - {fileID: 1595453669}
-  - {fileID: 952887472}
   - {fileID: 333593530}
   - {fileID: 1208719562}
   m_Father: {fileID: 0}
@@ -643,7 +643,7 @@ RectTransform:
   - {fileID: 2132661098}
   - {fileID: 1852135383}
   m_Father: {fileID: 136284610}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -981,6 +981,7 @@ GameObject:
   - component: {fileID: 952887475}
   - component: {fileID: 952887474}
   - component: {fileID: 952887473}
+  - component: {fileID: 952887476}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1001,7 +1002,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 136284610}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -1051,19 +1052,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 952887474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Lean.Localization.LeanLocalization, LeanLocalization
-        m_MethodName: SetCurrentLanguage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: English
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &952887474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1091,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952887471}
   m_CullTransparentMesh: 1
+--- !u!114 &952887476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952887471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaafd00ac2d975d4bb45f1d20f9cb7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: English
 --- !u!1 &962440862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,7 +1747,7 @@ RectTransform:
   - {fileID: 962440863}
   - {fileID: 1201658170}
   m_Father: {fileID: 136284610}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -2123,7 +2125,7 @@ RectTransform:
   - {fileID: 1976099995}
   - {fileID: 444339062}
   m_Father: {fileID: 136284610}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -2979,6 +2981,7 @@ GameObject:
   - component: {fileID: 2059306634}
   - component: {fileID: 2059306633}
   - component: {fileID: 2059306632}
+  - component: {fileID: 2059306635}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3049,19 +3052,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2059306633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Lean.Localization.LeanLocalization, LeanLocalization
-        m_MethodName: SetCurrentLanguage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Portuguese
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2059306633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3100,6 +3091,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059306630}
   m_CullTransparentMesh: 1
+--- !u!114 &2059306635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059306630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaafd00ac2d975d4bb45f1d20f9cb7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: Portuguese
 --- !u!1 &2089398812
 GameObject:
   m_ObjectHideFlags: 0
