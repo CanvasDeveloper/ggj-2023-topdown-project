@@ -26,7 +26,8 @@ public class FadeController : MonoBehaviour
     {
         if (InputSystem.GetDevice<Keyboard>().escapeKey.wasPressedThisFrame )
         {
-            SceneManager.LoadScene(2);
+            SceneLoader.Instance.NextScene();
+            //SceneManager.LoadScene(2);
         }
     }
 

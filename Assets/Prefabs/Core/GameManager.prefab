@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: English
+  currentLanguage: Portuguese
   detectLanguage: 1
   defaultLanguage: English
   saveLoad: 1
@@ -460,7 +460,7 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: English
-    Text: Quit To Game
+    Text: Quit Game
     Object: {fileID: 0}
   - Language: Portuguese
     Text: 'Sair do jogo

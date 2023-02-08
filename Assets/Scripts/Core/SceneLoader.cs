@@ -19,6 +19,7 @@ public class SceneLoader : Singleton<SceneLoader>
     private void Start()
     {
         fadeCanvas.SetActive(true);
+        LoadTitle();
     }
 
     public void ReloadScene()
@@ -33,7 +34,7 @@ public class SceneLoader : Singleton<SceneLoader>
 
     public void LoadTitle()
     {
-        LoadScene(0);
+        LoadScene(1);
     }
 
     private void LoadScene(int sceneIndex)
