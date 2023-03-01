@@ -51,6 +51,7 @@ public class ObjectPooler : Singleton<ObjectPooler>
                 }
                 else
                 {
+                    Debug.Log("Break");
                     break;
                 }
             }

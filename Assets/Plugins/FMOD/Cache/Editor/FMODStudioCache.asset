@@ -169,7 +169,7 @@ MonoBehaviour:
   - {fileID: 1405623175960073639}
   StringsBanks:
   - {fileID: 3207245728547959031}
-  cacheTime: 638113004739125476
+  cacheTime: 638114581845550742
   cacheVersion: 131601
 --- !u!114 &1026131816465065161
 MonoBehaviour:
@@ -240,7 +240,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Resources/ggj-2023-topdown-project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638113004739105481
+  lastModified: 638114581845540819
   FileSizes:
   - Name: Desktop
     Value: 2057184
@@ -287,7 +287,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/Resources/ggj-2023-topdown-project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638113004739125476
+  lastModified: 638114581845550742
   FileSizes:
   - Name: Desktop
     Value: 1512
