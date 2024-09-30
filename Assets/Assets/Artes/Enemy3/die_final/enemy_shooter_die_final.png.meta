@@ -66,10 +66,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -961,7 +961,6 @@ TextureImporter:
       enemy_shooter_die_final_4: -267262563
       enemy_shooter_die_final_7: 1418387862
       enemy_shooter_die_final_26: 1246479264
-      enemy_shooter_die_final_22: -1160808202
       enemy_shooter_die_final_34: -45384387
       enemy_shooter_die_final_37: -1142654008
       enemy_shooter_die_final_35: -406924673
@@ -994,6 +993,7 @@ TextureImporter:
       enemy_shooter_die_final_10: 1947587393
       enemy_shooter_die_final_30: -2053655385
       enemy_shooter_die_final_31: -1628954050
+      enemy_shooter_die_final_22: -1160808202
       enemy_shooter_die_final_12: -1665698045
       enemy_shooter_die_final_8: 1767853453
   spritePackingTag: 
