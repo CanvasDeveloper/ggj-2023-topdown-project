@@ -50,6 +50,12 @@ public class GameManager : Singleton<GameManager>
     {
         Paused = true;
         Time.timeScale = 0;
+
+        if(CrazySDK.IsInitialized)
+        {
+            CrazySDK.Ad.RequestAd(CrazyAdType.Midgame, () => { }, (error) => { }, null);
+        }
+
         OnPauseStatusChange?.Invoke(Paused);
         OnDead?.Invoke();
     }
@@ -91,13 +97,19 @@ public class GameManager : Singleton<GameManager>
     {
         Time.timeScale = 0;
         OnGameWin?.Invoke();
-        CrazySDK.Game.HappyTime();
+
+        if (CrazySDK.IsInitialized)
+        {
+            CrazySDK.Game.HappyTime();
+            CrazySDK.Ad.RequestAd(CrazyAdType.Midgame, () => { }, (error) => { }, null);
+        }
+
         SetCrazyGamePlaying(false);
     }
 
     public void SetCrazyGamePlaying(bool playing)
     {
-        if (CrazySDK.IsAvailable)
+        if (CrazySDK.IsInitialized)
             return;
 
         if(playing)
