@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using CrazyGames;
 
 public class SceneLoader : Singleton<SceneLoader>
 {
@@ -19,7 +20,11 @@ public class SceneLoader : Singleton<SceneLoader>
     private void Start()
     {
         fadeCanvas.SetActive(true);
-        LoadTitle();
+
+        CrazySDK.Init(() =>
+        {
+            LoadTitle();
+        });
     }
 
     public void ReloadScene()
@@ -41,6 +46,8 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         if (isLoadingScene)
             return;
+
+        GameManager.Instance.SetCrazyGamePlaying(false);
 
         StartCoroutine(LoadSceneRoutine(sceneIndex));
     }

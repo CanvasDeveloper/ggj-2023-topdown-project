@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using CrazyGames;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -17,7 +18,13 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 60;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    private void OnDestroy()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        SetCrazyGamePlaying(false);
     }
 
     /// <summary>
@@ -69,14 +76,39 @@ public class GameManager : Singleton<GameManager>
             return;
 
         if (Paused)
+        {
+            SetCrazyGamePlaying(true);
             ResumeGame();
+        }
         else
+        {
+            SetCrazyGamePlaying(false);
             PauseGame();
+        }
     }
 
     public void GameWin()
     {
         Time.timeScale = 0;
         OnGameWin?.Invoke();
+        CrazySDK.Game.HappyTime();
+        SetCrazyGamePlaying(false);
+    }
+
+    public void SetCrazyGamePlaying(bool playing)
+    {
+        if (CrazySDK.IsAvailable)
+            return;
+
+        if(playing)
+        {
+            CrazySDK.Game.GameplayStart();
+            Debug.Log("Game Started");
+        }
+        else
+        {
+            CrazySDK.Game.GameplayStop();
+            Debug.Log("Game Stopped");
+        }
     }
 }
